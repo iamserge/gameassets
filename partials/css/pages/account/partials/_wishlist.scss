@@ -1,0 +1,215 @@
+body#pgWishList {
+    h1 {
+        margin-top: 8px;
+    }
+    .formSepContainer {
+        padding: 0;
+    }
+    .formSep {
+        padding: 0;
+        border: none;
+    }
+    .panel {
+        display: block;
+        a {
+            color: $purple;
+        }
+    }
+    .message {
+        padding: 20px;
+    }
+    .panel.off {
+        display: none;
+    }
+    
+    #productLister .products {
+        border-top: 1px solid $lightBorderGrey;
+        overflow: hidden;
+        margin-bottom: 50px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include flexbox();
+        @include flex-direction();
+        @include flex-flow((row wrap));
+    }
+    
+    #aboutMe, #viewableBy, #purchaseFrom, #shareyourlist, .panel#settings {
+        display: none;
+    }
+    #content .sortBy  .field {
+        width: 400px;
+        padding-right: 20px;
+        float: right;
+    }
+}
+
+.wishlist {
+    .productItem {
+        display: block;
+        float: left;
+        width: 235px;
+        text-align: center;
+        padding: 20px 0 1px 0;
+        height: 450px;
+        border-left: 1px solid $lightBorderGrey;
+        border-right: 1px solid $lightBorderGrey;
+        border-bottom: 1px solid $lightBorderGrey;
+        margin: 0 -1px 0 0;
+        @include box-sizing-box();
+    }
+    .productHeader {
+        background: none;
+        border: 0;
+        color: $grey;
+        padding: 0 20px 20px;
+        height: 241px;
+        > a {
+            display: block;
+            height: 154px;
+            width: 100%;
+            line-height: 154px;
+            img {
+                height: 100%;
+                vertical-align: middle;
+                visibility: hidden;
+                &.horizontal {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        h2 {
+            font-size: 14px !important;
+            color: $grey;
+            text-align: left;
+            text-transform: none;
+            margin-top: 10px;
+            font-weight: normal;
+            line-height: 18px;
+            height: 48px;
+            &.longTitle {
+                font-size: em(14);
+                line-height: 14px;
+            }
+            a {
+                color: $grey !important;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        > .mintPrice.row {
+            display: none;
+        }
+        
+        .platformLogo {
+            margin-top: 3px;
+        }
+        .rating {
+            margin-top: 10px;
+        }
+        > span {
+            float: left;
+        }
+        .platformLogo {
+            float: right;
+            width: auto;
+        }
+        .ratingContainer {
+            float: left;
+            .rating {
+                width: 75px;
+                height: 14px;
+            }
+            > span {
+                opacity: 0.5;
+                font-size: 0.8em;
+            }
+            &.noRating {
+                margin-top: 12px;
+                font-size: 12px;
+                opacity: 0.5;
+            }
+        }
+    }
+    .productContent {
+        display: block;
+        clear: both;
+        padding: 0 20px;
+        margin-top: 12px;
+        height: 152px;
+        .priceContainer {
+            height: 100px;
+            position: relative;
+            text-align: left;
+            > a {
+                display: block;
+                margin-bottom: 8px;
+                color: $grey;
+                > span {
+                    float: right;
+                }
+                &.other {
+                    margin: 0;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0;
+                    width: 100%;
+                    left: 0;
+                }
+                &.noStock {
+                    color: $grey;
+                    opacity: 0.3;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        ul.action li input {
+            width: 100%;
+            display: block;
+            float: none;
+        }
+        .btn {
+            @extend %primaryBtn;
+            margin: 20px 0;
+            padding: 5px 0;
+            width: 100%;
+            @extend %openSansText;
+            font-weight: bold;
+            font-size: 1em;
+        }
+    }
+    textarea {
+        width: 100%;
+    }
+    .wlStatus {
+        display: none;
+    }
+    .sortBy input[type="submit"] {
+        width: auto;
+        float: right;
+        margin-top: 10px;
+        background: white;
+        @extend %secondaryBtnNew;
+    }
+    a#newAddress {
+        margin-top: 10px;
+        clear: both;
+        display: block;
+    }
+}
+
+form#WishListSettingsForm ul.action {
+    width: 68%;
+    margin-left: 32%;
+}

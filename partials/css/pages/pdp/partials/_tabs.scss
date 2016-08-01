@@ -1,0 +1,65 @@
+/**
+ *
+ * Tabs
+ *
+ */
+
+/* ul.tabs {
+    border: 0;
+    li {
+        padding: 10px 0px;
+        width: 100%;
+        text-align: center;
+        border-top: 0;
+        border-bottom: 1px solid $lightBorderGrey;
+        float: left;
+    }
+}
+ */
+ul.tabs {
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    border: 1px solid $lightBorderGrey;
+    border-bottom: 0;
+    @extend %flexbox;
+    @include flex-flow(nowrap);
+    @include justify-content(space-around);
+    li {
+        background: none;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        border-right: 1px solid $lightBorderGrey;
+        border-bottom: 1px solid $lightBorderGrey;
+        padding: 10px 0px;
+        width: 100%;
+        text-align:center;
+        &:first-child {
+            border-left: 0;
+        }
+        &:last-child {
+            border-right:0;
+        }
+        &.current {
+            border-bottom: 0;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                left: 0;
+                bottom: -1px;
+                background: white;
+            }
+        }
+    }
+}
+
+.tab-content {
+    display: none;
+    position: relative;
+    &.current {
+        display: inherit;
+    }
+}

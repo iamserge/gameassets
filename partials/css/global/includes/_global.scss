@@ -1,0 +1,304 @@
+body {
+	font-size: 14px;
+	overflow-x: hidden;
+	background: $backgroundGrey;
+	padding-top: 57px;
+	@extend %openSansText;
+}
+
+#skipLinks {
+	display:none;
+}
+
+.container, #content {
+	width:96%;
+	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	@extend %openSansText;
+}
+h1 {
+	font-size: 25px;
+}
+h2 {
+	font-size: 21px;
+}
+h3 {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.icon:after, .icon:before {
+	@extend %gameIconFont;
+}
+
+.collapsible {
+	.trigger {
+		position: relative;
+		&:after {	
+					}
+	}
+	>.trigger {
+		cursor: pointer;
+	}
+	>.trigger:after {
+		content: " ";
+		position: absolute;
+		width: 14px;
+		height: 8px;
+		right: 19px;
+		top: 6px;
+		display: block;
+		background-size: 100%;
+		@include transition(all, 0.2s, linear);
+		@include rotate(180);
+		@extend %arrowDown;
+	}
+
+	>.content {
+		overflow: hidden;
+
+		.trigger:after {
+			margin-right: 0;
+		}
+	}
+
+	&.collapsed {
+
+		>.trigger {
+			
+
+			&:after {
+				@include rotate(0);
+			}
+		}
+
+		>.content {
+			display: none;
+		}
+	}
+}
+
+.selectContainer {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	
+	position: relative;
+	padding-left: 10px;
+	select {
+		display: none;
+	}
+	span {
+		color: $grey;
+		@extend %openSansText;
+		display: inline-block;
+		padding: 10px 0;
+		font-size: em(16);
+	}
+	span.selected {
+		font-weight: bold;
+		margin-left: 5px;
+		border: 1px solid $borderColor;
+		margin-left: 10px;
+	    padding: 10px 32px 10px 10px;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 9px;
+			right: 10px;
+			top: 17px;
+			background-size: 100%;
+			@extend %arrowDown;
+		}
+	}
+	/*  @extend %sortSelect */
+	.dropdown {
+		display: none;
+		position: absolute;
+		width: 100%;
+		left: -1px;
+		top: 39px;
+		z-index: 100;
+		border: 1px solid $borderColor;
+		li {
+			
+			display: block;
+			color: $grey;
+			background: white;
+			padding: 10px 5px 10px 13px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			&:hover {
+				background: $lightBackgroundGrey;
+			}
+			&:last-child {
+				border-bottom: none;
+			}
+		   
+		}
+	}
+}
+
+.btn {
+	@extend %btn;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.20);
+	z-index:1000;
+	span.closeModal {
+	    background: $grey;
+	    border-radius: 50%;
+	    height: 30px;
+	    width: 30px;
+	    position: absolute!important;
+	    border: 3px solid white;
+	    right: -15px;
+	    top: -15px;
+	    color: white;
+	    font-size: 14px;
+	    padding: 3px 8px;
+	    cursor: pointer;
+	}
+	.textSpot {
+		max-height: 400px;
+		overflow-y: scroll;
+	}
+}
+
+.modalContent {
+	width: 760px;
+	background: white;
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin-left: -380px;
+	.textSpot {
+		padding: 20px;
+		h5 {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+		p {
+			line-height: 18px;
+			margin: 10px 0;
+		}
+	}
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+	padding: 10px;
+	border: 1px solid $lightBorderGrey;
+	font-weight: lighter;
+	text-transform: none;
+	font-size: 16px;
+	vertical-align: top;
+
+	&.errorInput {
+		border-color: $red;
+		&:focus {
+			outline: none !important;
+		}
+	}
+	@extend %openSansText;
+}
+
+input[type="submit"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+	-webkit-border-radius:0px;
+}
+
+.selectDropdown {
+	position: relative !important;
+	display: inline-block !important;
+	border: 1px solid $lightBorderGrey;
+
+	&:before {
+		content: '';
+		position: absolute;
+		background: $lightBorderGrey;
+		width: 1px;
+		height: 100%;
+		right: 45px;
+		top: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 9px;
+		right: 15px;
+		top: 50%;
+		margin-top: -4px;
+		background-size: 100%;
+		@extend %arrowDown;
+	}
+
+	select {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+		outline: none;
+		border: none;
+		text-indent : 0.01px;
+		text-overflow : '';
+		position: relative;
+		z-index: 2;
+		background: none;
+		padding-right: 55px;
+		width: 100%;
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	//IE9 specific styling
+	@media all and (min-width:0\0) and (min-resolution:.001dpcm){
+		overflow: hidden;
+
+		&:before {
+			background: white;
+			border-right: 1px solid $lightBorderGrey;
+			width: 30px;
+			z-index: 3;
+		}
+	}
+}
+
+
+.gameLogo {
+	text-indent: -9999px;
+	font-size: 0;
+	margin-left: 3px;
+	width: 59px;
+	height: 20px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	display: inline-block;
+	@extend %icon_gamelogo_purple;
+}
+

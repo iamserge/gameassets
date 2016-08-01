@@ -1,0 +1,37 @@
+ #pgStoreLocatorStoreDetails {
+     div#storeDetails {
+         float: left;
+         width: 55%;
+     }
+     p.openingtimes {
+         a.clickCollect {
+             display: none;
+         }
+     }
+     div#storeControls {
+         float: right;
+         width: 43%;
+         fieldset {
+             width: 100%;
+             ul.action li {
+                 text-align: right;
+             }
+         }
+     }
+     .hoursCol {
+         float: right;
+         width: 40%;
+         p.openingtimes:first-child {
+             display: none;
+         }
+     }
+     .addressCol {
+         float: left;
+         width: 50%;
+     }
+
+     #storeMap {
+        height:200px;
+        margin-bottom:20px;
+     }
+ }

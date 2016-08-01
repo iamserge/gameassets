@@ -1,0 +1,45 @@
+
+.tooltip {
+     position: absolute;
+     width: 243px;
+     color: #333;
+     background: white;
+     border: 1px solid $lightBorderGrey;
+     text-align: center;
+     font-size: 12px;
+     padding: 10px;
+     z-index: 20;
+     display: none;
+}
+.tooltip:after, .tooltip:before {
+    content: '';
+    position: absolute;
+    top: -19px;
+    left: 50%;
+    margin-left: -19px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid white;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+}
+.tooltip:before {
+    border-bottom: 20px solid $lightBorderGrey;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    top: -20px;
+}
+
+.tooltip.clickCollectTooltip {
+   
+    &:after {
+        right:20px;
+    }
+}
+
+.tooltip.freeDeliveryTooltip {
+
+    &:after {
+        left:80px;
+    }
+}

@@ -1,0 +1,67 @@
+/* media query mixins */
+
+$mobilePortrait: 480px;
+$mobileLandscape: 40.063em;
+$tabletPortrait: 59.999em;
+$tabletLandscape: 64.063em;
+$desktop: 1200px;
+@mixin desktop {
+    @media (min-width: #{desktop}) {
+        @content;
+    }
+}
+
+@mixin tabletLandscape {
+    @media (max-width: #{$tabletLandscape}) {
+        @content;
+    }
+}
+
+@mixin tabletPortrait {
+    @media (max-width: #{$tabletPortrait}) {
+        @content;
+    }
+}
+
+@mixin mobileLandscape {
+    @media (max-width: #{$mobileLandscape}) {
+        @content;
+    }
+}
+
+@mixin mobilePortrait {
+    @media (max-width: #{$mobilePortrait}) {
+        @content;
+    }
+}
+@mixin mobile {
+     @media (max-width: #{$mobileLandscape}) {
+        @content;
+    }
+}
+
+@mixin iphone4 {
+    @media (max-width: #{$mobilePortrait}) and (max-height: 480px) {
+        @content;
+    }
+}
+
+@mixin iphone5 {
+    @media (max-width: #{$mobilePortrait}) and (max-height: 568px) {
+        @content;
+    }
+}
+
+@mixin iphone6 {
+    @media (max-width: #{$mobilePortrait}) and (max-height: 736px) {
+        @content;
+    }
+}
+
+/* Example: 
+    div {
+        @include mobilePortrait {
+            height:50px;
+        }
+    }
+*/

@@ -1,0 +1,104 @@
+.community {
+	display: inline-block;
+	width: 100%;
+	padding-top: 20px;
+	margin: 20px 0;
+	background: white;
+
+	h2 {
+		display: inline-block;
+		margin: 0 0 0 20px;
+		line-height: 35px;
+	}
+
+	label {
+		float: right;
+		width: 29%;
+		margin: 0 20px 0 0;
+
+		span:first-of-type {
+			@extend %visuallyHidden;
+		}
+
+		.selectDropdown {
+			width: 100%;
+		}
+
+		select {
+			width: 100%;
+			padding: 7px 55px 7px 6px;
+			font-size: 14px;
+			font-weight: bold;
+		}
+	}
+
+	.franchiseContainer {
+		text-align: right;
+		padding: 20px;
+		float: left;
+		width: 100%;
+		&.active {
+			display:block;
+		}
+
+		div > a {
+			float: left;
+			text-align: left;
+			display: block;
+			position: relative;
+			margin-bottom: 10px;
+			span {
+				background: rgba(255, 255, 255, 0.7);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				padding: 10px;
+				color: $grey;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.mainBoxes {
+			float: left;
+		    width: 35.8%;;
+			a {
+				width: 100%;
+			} 
+		}
+		.medBoxes {
+		    width: 63.2%;
+			float: right;
+			> a {
+				display: block;
+				width: 48.5%;
+				float: left;
+			}
+			.medBox2, .medBox4, .medBox5 {
+				float: right;
+			}
+		}
+	}
+}
+
+
+//remove these layout classes and placeholder divs
+//when we have actual content
+.community .franchise a div {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	background: #f7f7f7;
+	height: 105px;
+	background-size:cover;
+}
+
+.community .franchise .primaryImage div {
+	height: 275px;
+}
+
+.community .franchise .secondaryImage div {
+	height: 50px;
+}

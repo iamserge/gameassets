@@ -1,0 +1,307 @@
+.container#basket {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.basketSummary {
+    width: 100%;
+    margin-bottom: 20px;
+    background: white;
+    border: 1px solid #ECECEC;
+    td,
+    img {
+        vertical-align: top;
+    }
+    .platformLogo {
+        display: block;
+        margin-top: 10px;
+    }
+    th,
+    td {
+        padding: 20px;
+        width: 140px;
+        &:last-of-type {
+            text-align: right;
+            padding-right: 40px;
+        }
+        &:nth-last-child(n+2) {
+            text-align: center;
+        }
+        &:nth-last-child(n+4) {
+            text-align: left;
+        }
+        &:nth-of-type(2n) {
+            width: auto;
+        }
+        &:nth-of-type(3n),
+        &:nth-of-type(5n) {
+            font-size: 18px;
+            vertical-align: middle;
+        }
+        &:nth-of-type(4n) {
+            vertical-align: middle;
+        }
+        &:first-of-type {
+            text-align: center;
+        }
+    }
+    th:first-of-type {
+        text-align: left;
+        padding-left: 40px;
+    }
+    th {
+        font-size: 14px !important;
+        font-weight: bold;
+
+    }
+    td {
+        border-top: 1px solid #ECECEC;
+        position: relative;
+    }
+    td.qty {
+        > span {
+            display: block;
+        }
+        > button {
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border: 1px solid #ECECEC;
+            padding: 11px 0;
+            font-size: 14px;
+            width: 27px;
+            display: inline-block;
+            &:hover {
+                background: #ECECEC;
+            }
+        }
+        &.inactive {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+    th.col.qty {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 21px;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-transform: none;
+    }
+    a {
+        color: $purple;
+        text-decoration: none;
+    }
+    p.preorder {
+        padding: 10px;
+        background-color: $lightBackgroundGrey;
+    }
+    .warrantyEspotContainer {
+        display: none;
+    }
+    .warrantyContainer {
+        position: relative;
+        width: 292px;
+        padding-top: 17px;
+        &:hover {
+            .warrantyInfo {
+                display: block;
+            }
+        }
+    }
+    .warranty {
+        background-repeat: no-repeat;
+        padding: 13px 2px 13px 50px;
+        background-position: 17px;
+        background-size: 23px;
+        font-weight: bold;
+        background-color: rgba(236, 236, 236, 0.5);
+        border: 1px solid #ececec;
+        width: 273px;
+        display: block;
+        @extend %warrantyIcon;
+        &:hover {
+            background-color: rgba(236, 236, 236, 1);
+        }
+    }
+    .warrantyInfo {
+        display: none;
+        width: 16px;
+        height: 16px;
+        background-size: 100%;
+        position: absolute;
+        right: 2px;
+        top: 0px;
+        opacity: 0.6;
+        @extend %infoIcon;
+    }
+    .warrantyTerms {
+        margin-top: 7px;
+        display: block;
+        color: #333;
+        text-decoration: underline;
+        margin-left: 154px;
+    }
+    td,
+    p {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    p span {
+        font-weight: bold;
+    }
+    td.qty label {
+        width: 100%;
+        display: inline-block;
+        span {
+            @extend %visuallyHidden;
+        }
+    }
+    input[type=number] {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 13px;
+        width: 38%;
+    }
+    .remove {
+        color: $purple;
+        text-decoration: underline;
+    }
+}
+
+div#expressShippingMethods {
+    h3 {
+        font-weight: normal;
+    }
+    h2 {
+        font-weight: bold;
+    }
+}
+
+.basketTotals {
+    float: right;
+    width: 300px;
+    background: white;
+    border: 1px solid #ECECEC;
+    padding: 43px 40px 29px 20px;
+    margin-top: -21px;
+    position: relative;
+    > div {
+        margin-bottom: 10px;
+        span {
+            float: right;
+            font-weight: bold;
+        }
+        &.total {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    .vat {
+
+    }
+    .voucher {
+        position: absolute;
+        width: 240px;
+        top: 16px;
+    }
+    > .appliedCards {
+        margin-top: 20px;
+        float: right;
+        width: 100%;
+        position: relative;
+        span {
+            float: none;
+            margin-left: 24px;
+        }
+        a {
+            float: right;
+            color: $grey;
+            font-weight: bold;
+        }
+        .tooltip {
+            top: -64px;
+            left: -26px;
+            font-weight: normal;
+            
+        }
+        &:hover .tooltip{
+            visibility: visible;
+        }
+    }
+
+    > span {
+        float: right;
+    }
+}
+
+#signIn {
+    width: 300px;
+    float: right;
+    padding: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
+
+
+.proceedContainer {
+    float: right;
+    width: 300px;
+    margin-top: 15px;
+    a {
+        width: 47%;
+        padding: 10px;
+        float:left;
+        white-space: normal;
+        &.anon {
+            float: right;
+        }
+    }
+}
+
+.js-hide {
+    display: none !important;
+}
+
+.emptyBasket,
+.emptyBasket > div {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    vertical-align: top;
+}
+
+.emptyBasket {
+    margin-bottom: 20px;
+    > div {
+        border: 1px solid #ECECEC;
+    }
+    p,
+    h2,
+    h3 {
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    h2 {
+        @extend %openSansText;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    a,
+    em {
+        color: $purple;
+        font-style: none;
+    }
+    .addRewardCard {
+        background: $lightBackgroundGrey;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+}

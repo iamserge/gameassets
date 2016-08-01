@@ -1,0 +1,41 @@
+.latestNews {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 20px;
+	background: #cf0303;
+
+	.container {
+		width: 1200px;
+	}
+
+	h2, 
+	a {
+		color: white;
+		line-height: 44px;
+	}
+
+	h2 {
+		float: left;
+		margin-right: 10px;
+		font-size: 16px;
+	}
+
+	ul {
+		height: 44px;
+		overflow: hidden;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	a {
+		font-size: 14px;
+		text-decoration: none;
+
+		&:hover, &:active, &:focus {
+			text-decoration: underline;
+		}
+	}
+}

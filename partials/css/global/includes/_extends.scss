@@ -1,0 +1,45 @@
+%carouselArrows {
+	position: absolute;
+	font-size: 16px;
+	width: 30px;
+	bottom: 3%;
+	background-color: white;
+	font-size: 0;
+	height: 94%;
+	opacity: 0.8;
+	z-index: 100;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 10px;
+	@include transition(opacity, .1s);
+	&.disabled {
+	    opacity: 0.2;
+	    pointer-events: none;   
+	}
+	&:before {
+	    font-size: 20px;
+	    position: absolute;
+	    color: $grey;
+	    top: 46%;
+	}
+	&:hover {
+	    opacity: 1;
+	}
+	&.carouselPrev {
+	    left: 0;
+	    @extend %icon_leftarrow_black;
+	}
+	&.carouselNext {
+	    right: 0;
+	    @extend %icon_rightarrow_black;
+	}
+	&.prev {
+	    left: 0;
+	    @extend %icon_leftarrow_black;
+	}
+	&.next {
+	    right: 0;
+	    @extend %icon_rightarrow_black;
+	}
+}

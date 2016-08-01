@@ -1,0 +1,106 @@
+#pgPaymentCard {
+    p.walletIntro {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .formSep {
+        position: relative;
+    }
+    div#myAccountPanel {
+        ul.topAction {
+            width: auto;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            @extend %clearfix;
+        }
+    }
+    .options.defaultPayment {
+        li.setDefault {
+            position: relative;
+        }
+        .element {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    div.savedPaymentCards {
+        li.paymentDetails {
+            @extend %clearfix;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid $lightBorderGrey;
+            &:last-child {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            ul.action {
+                input[type="radio"] {
+                    float: none;
+                    display: block;
+                    padding: 0!important;
+                    margin-bottom: 10px!important;
+                }
+                input[type="submit"] {
+                    clear: both;
+                    margin-bottom: 10px!important;
+                    width: 100%;
+                }
+                label {
+                    float: left;
+                    width: 90%;
+                    margin-bottom: 10px;
+                }
+                li {
+                    margin-bottom: 10px;
+                    @extend %clearfix;
+                }
+            }
+        }
+        .info {
+            float: left;
+            width: 66%;
+            > * {
+                float: left;
+            }
+            ul.pay {
+                width: 49%;
+                margin-right: 1%;
+            }
+            > p {
+                width: 49%;
+                margin: 0 1% 10px 0;
+            }
+            ul.adr {
+                width: 50%;
+            }
+        }
+        .options {
+            width: 33%;
+            float: left;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: normal;
+            color: $grey;
+        }
+        li.setDefault {
+            .element {
+                width: 100%;
+                margin-left: 0;
+            }
+            .indicator {
+                display: none;
+            }
+        }
+    }
+    input.off {
+        display: none;
+    }
+
+    #paymentCard input#addPayment {
+        width:68%;
+        margin-left:32%;
+    }
+}

@@ -1,0 +1,51 @@
+#pgOrderDetails {
+    .addresses {
+        float: left;
+        width: 66.66%;
+        .address {
+            float: left;
+            width: 50%;
+        }
+    }
+    .paymentMethods {
+        float: left;
+        width: 33.33%;
+        margin-top: 40px;
+    }
+    .orderDetailsItems table.orderDetailsTotals {
+        width: 50%;
+        td {
+            text-align: center;
+        }
+    }
+    tr.actions {
+        a {
+            float: left;
+            width: 20%;
+        }
+    }
+    .modal {
+        .rating {
+            margin-bottom: 10px;
+        }
+        .ratingCount {
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin: 20px 0 10px;
+        }
+        .table {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .notification a.callToAction.primaryCTA {
+        margin-top: 10px;
+        display: block;
+    }
+    .product {
+        .photo {
+            margin-bottom: 20px;
+        }
+    }
+}

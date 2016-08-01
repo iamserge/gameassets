@@ -1,0 +1,123 @@
+#sidebar {
+	position: relative;
+	float: left;
+	z-index: 10;
+	margin-left: 10px;
+	clear: left;
+	width: 240px;
+	a {
+		color: $grey;
+	}
+	> div, .categoriesLinks {
+		padding-top: 14px;
+		background-color: white;
+		margin-bottom: 10px;
+		h2 {
+			font-weight: normal;
+			font-size: 16px;
+			padding: 0 0 16px 21px;
+			text-transform: capitalize;
+
+		}
+		> div {
+			padding: 0 21px;
+			font-size: 14px;
+
+			&.filters {
+				border-top: 1px solid $lightBorderGrey;
+				a {
+					display: block;
+					margin-bottom: 24px;
+					span {
+						margin-left: 12px;
+						color: $lightGrey;
+					}
+					&:last-child {
+						margin-bottom: 21px;
+					}
+					&:first-child {
+						margin-top: 18px;
+					}
+					
+				}
+			}
+
+		}
+		&.emsWrapper {
+			background: transparent;
+			padding: 0;
+			margin: 0;
+			> div {
+				padding: 0;
+			}
+		}
+		&.applied {
+			padding-bottom: 11px;
+			h2 {
+				position: relative;
+				padding: 0 0 8px 21px;
+				margin: 10px 0 14px;
+				a {
+					padding: 5px 17px;
+					font-size: 12px;
+					position: absolute;
+					right: 19px;
+					top: -5px;
+				}
+			}
+			> div {
+				> span {
+					display: block;
+					background-color: $outofstockGrey;
+					padding: 8px 17px 7px;
+				    margin-bottom: 10px;
+				    position: relative;
+				    font-size: 16px;
+				    a {
+				    	position: absolute;
+				    	font-weight: bold;
+				    	right: 16px;
+				    	top:5px;
+				    	color: #e8e4e4;
+				    	text-decoration: none;
+
+				    }
+				}
+			}
+		}
+		&.categoriesLinks {
+			padding-bottom: 1px;
+			a {
+				position: relative;
+				&:after {
+					
+					content: " ";
+					position: absolute;
+					width: 16px;
+					height: 8px;
+					right: 0px;
+					top: 1px;
+					display: block;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: right;
+					@include rotate(-90);
+					@extend %arrowDown;
+				}
+				
+			}
+		}
+		&#inStockFilters {
+			.content form {
+				padding: 20px 0;
+			}
+		}
+		input[name="submitHideOutOfStock"] {
+			display: none;
+		}
+	}
+	&.fixed {
+		position: fixed;
+		top: 12px;
+	}
+}

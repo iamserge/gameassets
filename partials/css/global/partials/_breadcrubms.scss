@@ -1,0 +1,14 @@
+#breadcrumb {
+	li {
+		display: inline-block;
+		color: $purple;
+		&:before {
+			content: ">";
+			color: $grey;
+			margin: 0 8px;
+		}
+		&.first:before {
+			display: none;
+		}
+	}
+}

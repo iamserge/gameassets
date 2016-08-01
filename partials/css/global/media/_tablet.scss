@@ -1,0 +1,277 @@
+@include tabletPortrait {
+/**
+ *
+ * Header
+ *
+ */
+	body {
+		padding-top: 107px;
+	}
+
+	header {
+		height: auto;
+
+		.container, 
+		.logo, 
+		nav, 
+		.navRight {
+			display: inline-block;
+		}
+
+		> .container {
+			padding: 0;
+			height: auto;
+			vertical-align: top;
+		}
+
+		.logo {
+			float: left;
+			width: 120px;
+
+			&:after {
+				font-size: 25px;
+				line-height: 50px;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+		#searchResults .searchTerm {
+			padding-left: 28px;
+		}
+
+		nav {
+			width: auto;
+			float: left;
+			position: static;
+
+			.toggleContainer {
+				width: 100%;
+
+				> a {
+					line-height: 49px;
+					
+
+					&:after {
+						top: -50px;
+					}
+
+					span {
+						&:after {
+							content: '';
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			.menuContainer {
+				top: 50px;
+			}
+
+			.dropdownMenu {
+				width: 100%!important;
+			}
+
+			.espot {
+				display: none;
+			}
+
+			.mainMenu {
+				width: 100%;
+			}
+		}
+	}
+
+	.searchContainer {
+		float: left;
+		clear: left;
+		display: inline-block;
+		width: 100%;
+		padding: 0 10px;
+
+		.navbarSearch {
+			padding: 0 0 15px;
+		}
+	}
+
+	#searchResults {
+		&.active {
+			margin-top: 65px;
+		}
+
+		.container {
+			width: 100%;
+		}
+	}
+
+	.navRight {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: auto;
+
+		#searchLink, 
+		#loginLink, 
+		#shopsLink {
+			height: 50px;
+			width: 50px;
+			text-align: center;
+
+			span {
+				display: none;
+			}
+
+			&:before {
+				margin: 0;
+			}
+		}
+
+		.toggleContainer > a {
+			line-height: 50px;
+
+			&:before {
+				font-size: 20px;
+				vertical-align: middle;
+				line-height: 44px;
+			}
+
+			&:after {
+				top: -50px;
+			}
+		}
+	}
+
+	.accountDropdown {
+		&.dropdownMenu {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.signPosts {
+	 
+	    > div {
+	        width: auto;
+	    }
+	}
+	footer {
+		nav {
+			padding: 0;
+
+			> a {
+				width: 25%;
+				float: left;
+				font-size: 13px;
+			}
+		}
+
+		.container {
+			width: 100%;
+		}
+		.productsSection, .moreSection {
+			.container {
+				padding: 10px 40px;
+				.content {
+					border: none;
+					> div {
+						border: none;
+					}
+				}
+			}
+		}
+		.content {
+			width: 100%;
+			padding: 10px;
+			margin: 0;
+
+		}
+
+		.close {
+			right: 10px;
+		}
+
+		.col4 > div {
+			width: 25%;
+			padding: 15px;
+			margin: 0;
+			float: left;
+		}
+		.col3 > div {
+			width: 27%;
+		}
+		.btn {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		#socialIcons {
+			a {
+				float: none;
+				display: inline-block;
+			}
+		}
+
+		input[type=email] {
+			width: 100%;
+		}
+
+		.comminitySection {
+			.btn {
+				vertical-align: top;
+				margin-top: 10px;
+			}
+		}
+
+		.moreSection .col2 > div {
+			width: 100%;
+		}
+
+		.waysToPay {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+
+@include tabletLandscape {
+/**
+ *
+ * Footer
+ *
+ */
+	header nav {
+		position: static;
+		.menuContainer {
+			> div .dropdownMenu {
+				left: 0;
+				width: 100%;
+				background-color: white;
+			}
+			.format .links > div {
+				width: 30%;
+			}
+		}
+		.newMenuContainer {
+			.leftCol {
+				height: 520px;
+			}
+			.links {
+				width: calc(100% - 250px);
+				width: -webkit-calc(100% - 250px);
+				width: -moz-calc(100% - 250px);
+			    height: 520px;
+				> div.large {
+					width: 33%;
+				}
+			}
+		}
+	}
+	
+
+	.modalContent {
+		width: 680px;
+		margin-left: -340px;
+	}
+}

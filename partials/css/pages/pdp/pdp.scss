@@ -1,0 +1,32 @@
+/**
+ *
+ * Global Includes
+ *
+ */
+
+@import "../../global/globalIncludes";
+
+/**
+  *
+  * Global Partials
+  *
+  */
+
+@import 'partials/slider';
+@import 'partials/main';
+@import 'partials/sidebar'; 
+@import 'partials/modal';
+@import 'partials/tooltip';
+@import 'partials/tabs';
+@import 'partials/bundle';
+@import 'partials/reviews';
+
+/**
+ *
+ * Media Overwrite Includes
+ *
+ */
+
+@import "media/desktop";
+@import "media/tablet";
+@import "media/mobile";

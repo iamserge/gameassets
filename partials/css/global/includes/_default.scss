@@ -1,0 +1,56 @@
+%table {
+	display:table;
+	height:100%;
+}
+
+%table-cell {
+	display:table-cell;
+	vertical-align:middle;
+}
+
+%text-center {
+	text-align:center;
+}
+
+
+%clr {
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+%visuallyHidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+}
+
+%clearfix {
+	&:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+}
+
+//style to overwrite visuallyHidden
+%visuallyDisplayed {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "game-static-build",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
+  }
+}

@@ -1,0 +1,133 @@
+#orderSummary {
+	width:34%;
+	float: right;
+	//border-left: 1px solid $lightBorderGrey;
+	@include lightBorderBox();
+	margin-bottom: 70px;
+
+	> div {
+		margin-bottom: 10px;
+		padding:20px;
+		height:auto;
+	}
+
+	h3 {
+		margin: 10px;
+	}
+	.totals {
+		border-top: 1px solid $lightBorderGrey;
+
+		li {
+			padding: 10px;
+			border-bottom: 1px solid $lightBorderGrey;
+
+			> span {
+				display: inline-block;
+				
+			}
+			.name {
+				
+			}
+			.value {
+				float: right;
+			}
+			&.total {
+				background-color: $lightBackgroundGrey;
+			}
+		}
+	}
+
+	.delivery {
+		margin-top: 36px;
+		> div{
+			border-top: 1px solid $lightBorderGrey;
+			overflow: hidden;
+			padding-top: 10px;
+			p {
+				margin: 10px 0;
+				line-height: 18px;
+			}
+			span {
+				display: block;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			.key {
+				display: inline-block;
+				float: left;
+				padding-left: 10px;
+
+			}
+			.value {
+				display: inline-block;
+				float: right;
+				padding-right: 10px;
+			}
+			.address {
+				line-height: 18px;
+			}
+		}
+	}
+
+	.basketItems {
+		.supplier {
+			border-top: 1px solid $lightBorderGrey;
+			margin:30px 0 20px 0;
+			.supplierName {
+				padding: 10px;
+				display: block;
+				background-color: $lightBackgroundGrey;
+				border-bottom: 1px solid $lightBorderGrey;
+			}
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+
+		.item {
+			overflow: hidden;
+			padding: 10px;
+			border-bottom: 1px solid $lightBorderGrey;
+			.imageHolder {
+				width: 65px;
+				float: left;
+				img {
+					width: 100%;
+				}
+			}
+			.details {
+				float: left;
+				margin-left: 10px;
+				width: 185px;
+				p {
+					font-size: 12px;
+				}
+				.title {
+					font-weight: bold;
+					@extend %openSansText;
+				}
+				.platform {
+					margin: 5px 0;
+				}
+				.quantity {
+					display: inline;
+				}
+				.provenance {
+					margin-bottom: 5px;
+				}
+				.value {
+					display: inline;
+					float: right;
+					color: $purple;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	
+	#rewardCardSection {
+		padding: 10px;
+	}
+	
+}

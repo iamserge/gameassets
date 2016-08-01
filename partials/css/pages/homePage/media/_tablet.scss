@@ -1,0 +1,50 @@
+@include tabletLandscape {
+
+	#homePage.container, 
+	.latestNews .container {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+// Espots
+	#homePage .homePageEspots {
+		display: inline-block;
+		margin: 0;
+		div {
+			height: auto;
+		}
+		.primaryEspots, 
+		.secondaryEspots {
+			display: inline-block;
+			margin-bottom: 20px;
+			width: 100%;
+			border: none;
+		}
+
+		.secondaryEspots {
+			li {
+				width: 50%;
+				float: left;
+			}
+		}
+		.primaryEspots li:first-of-type div {
+			height: auto;
+		}
+	}
+
+// Community
+	#homePage .community {
+		label {
+			width: 45.7%;
+		}
+
+		.franchise {
+			> div, 
+			ul {
+				width: 50%;
+			}
+		}
+	}
+
+//end mediaquery
+}

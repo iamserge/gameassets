@@ -1,0 +1,246 @@
+/* Amount of single links at bottom of Department  */
+
+
+/**
+ *
+ * Amount of single links at bottom of Department
+ *  $singleLinksCount
+ */
+
+$singleLinksCount: 6;
+$easeInOut: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+/**
+ *
+ * Navigation 
+ *
+ */
+
+%hoverUnderline {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+%dropdownMenu {
+    .dropdownMenu {
+        display: none;
+        position: absolute;
+        background: white;
+        z-index: 50;
+        padding: 20px;
+        top: 50px;
+        text-align: left;
+        &.department, &.format {
+            padding: 0;
+        }
+        @include box-shadow(0, 3, 11px, 2px, rgba(0, 0, 0, 0.05));
+        a {
+            color: $grey;
+            display: block;
+            text-decoration: none;
+            &.btn {
+                color: white;
+            }
+            //@extend %hoverUnderline;
+        }
+        &.active {
+            display: block;
+            bottom: auto !important;
+        }
+    }
+}
+
+%navigation {
+
+    > a {
+        color: white;
+        opacity: 1;
+        z-index: 9;
+        position: relative;
+        padding: 0 8px;
+        text-decoration: none;
+        line-height: 50px;
+        float: left;
+        display: inline-block;
+        font-size: 15px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 20px;
+        padding: 0 0px 0 34px;
+        background-position: 8px;
+        &.active {
+            color: black;
+            background-color: white;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            top: -54px;
+            left: 0;
+            opacity: 1;
+            z-index: -1;
+        }
+        &.active::after {
+            top: 0;
+            height: 106%;
+        }
+        span {
+            &:after {
+                display: inline-block;
+                margin: 0 7px 0 6px;
+                line-height: 15px;
+                content: "";
+                width: 8px;
+                height: 6px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                @extend %icon_downcta_white;
+            }
+        }
+    }
+}
+
+header {
+    color: white;
+    background-color: $grey;
+    border-bottom: 5px solid $purple;
+    height: 57px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    > .container {
+        position: relative;
+        width: 100%;
+        display: table;
+        overflow: visible;
+        max-width: 100%;
+        > a {
+            text-decoration: none;
+        }
+    }
+    .logo {
+        width: 120px;
+        display: table-cell;
+        padding-left: 10px;
+        vertical-align: top;
+        text-decoration: none;
+        color: white;
+        line-height: 47px;
+        font-size: 0;
+        background-repeat: no-repeat;
+        background-position: center 13px;
+        background-size: 100px;
+        @extend %icon_gamelogo_white;
+        span {
+            display: inline-block;
+            text-indent: -9999px;
+        }
+        &.inactive {
+            pointer-events: none;
+        }
+        &:hover {
+            background-color: $purple;
+        }
+       
+    }
+    .navMenuToggle {
+        margin: 0 auto;
+        @extend %table;
+        li {
+            @extend %table-cell;
+        }
+    }
+    nav {
+        display: table-cell;
+        width: 400px;
+        z-index: 99999;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .department {
+        width: 1210px;
+    }
+    .mainMenu {
+        float: left;
+        width: 800px;
+        display: inline-block;
+        letter-spacing: -4px;
+        > li {
+            letter-spacing: 0;
+            vertical-align: top;
+            width: 25%;
+            padding: 10px;
+            display: inline-block;
+            li {
+                font-size: 13px;
+            }
+        }
+        a {
+            padding: 3px 0;
+        }
+        h2 {
+            border-bottom: 1px solid $textGrey;
+            font-size: 14px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .twoCol {
+        @include columns(2);
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;
+        li {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            padding-right: 5px;
+        }
+    }
+    .singleLinks {
+        clear: both;
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: -4px;
+        margin-top: 20px;
+        li {
+            letter-spacing: 0;
+            display: inline-block;
+            width: percentage(1 / 6);
+            text-align: center;
+            border-left: 1px solid $textGrey;
+            &:first-of-type {
+                border: none;
+            }
+            a {
+                padding: 7px 0;
+                font-weight: bold;
+            }
+        }
+    }
+    .espot {
+        float: right;
+        width: 360px;
+        span {
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+            height: 375px;
+            background: $lightBackgroundGrey;
+        }
+    }
+    .secureCheckout {
+        float: right;
+        margin-top: 13px;
+    }
+}
+
+

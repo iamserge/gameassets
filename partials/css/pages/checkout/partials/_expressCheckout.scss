@@ -1,0 +1,796 @@
+%hint {
+    position: relative;
+    .tooltip {
+        bottom: 40px;
+        left: 50%;
+        margin-left: -120px;
+        background: $backgroundGrey;
+        line-height: 16px;
+        font-size: 14px;
+        &:after {
+            border-top-color: $backgroundGrey;
+        }
+    }
+    &:before {
+        content: "?";
+        display: inline-block;
+        margin-right: 5px;
+        border-radius: 50px;
+        background-color: $lightBorderGrey;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: white;
+        font-weight: bold;
+    }
+    &:hover .tooltip{
+        visibility: visible;
+    }
+}
+.express {
+	
+	
+	#promotionalCode {
+		h2 {
+			display: none;
+		}
+
+		label {
+			width: 70%;
+
+			span {
+				display: inline-block;
+				width: 40%;
+				margin-top: 13px;
+				float: left;
+			}
+
+			input {
+				width: 50%;
+			}
+		}
+
+		em {
+			display: inline-block;
+			margin: 10px 0 0;
+			width: 100%;
+			font-size: 10px;
+			font-style: italic;
+		}
+	}
+
+
+	#deliveryAddress, 
+	#payNow, 
+	#rewardCardLink {
+		h2 {
+			margin-bottom: 15px;
+		}
+		.col2 {
+			background: white;
+			padding: 20px;
+			overflow: hidden;
+			border: 1px solid $lightBorderGrey;
+			h2 {
+				margin-bottom: 30px;
+			}
+			label {
+				display: block;
+				margin-bottom: 20px;
+				width: 45%;
+				float: left;
+				margin-top: 13px;
+			}
+			#rewardCardNumberRedeem {
+				float: left;
+				width: 27%;
+			}
+			input[name="redeemRewardPoints"]{
+				width: 25%;
+				float: right;
+				font-weight: normal;
+				font-size: 16px;
+				text-transform: none;
+				@extend %secondaryBtn;
+			}
+		}
+	}
+
+	.payment-summary {
+		dl {
+			float: right;
+			width: 35%;
+
+			dt, 
+			dd {
+				float: left;
+				padding: 10px;
+				border-top: 1px solid $lightBorderGrey;
+			}
+
+			dt {
+				clear: left;
+				width: 70%;
+			}
+
+			dd {
+				width: 30%;
+				text-align: right;
+			}
+
+			.total {
+				border-bottom: 1px solid $lightBorderGrey;
+				background: $lightBackgroundGrey;
+			}
+		}
+	}
+
+	
+
+
+
+
+
+
+
+	.delivery td, .deliveryGroupTitle td  {
+		text-align: left;
+	}
+	.deliveryGroupTitle {
+		td {
+			padding: 0;
+		}
+		h2 {
+			padding: 20px;
+			border-top: 2px solid $lightBorderGrey;
+			margin-bottom: 0;
+		}
+	}
+
+	.deliveryOptions {
+		width: 217px;
+		float: left;
+		h3 {
+			margin: 20px 0 10px 0;
+		}
+		label {
+			width: 84%;
+			margin-left: 0;
+			float: right;
+			line-height: 18px;
+		}
+		> div {
+			overflow: hidden;
+			margin-bottom: 10px;
+		}
+		&:first-of-type {
+			margin: 0 40px 0 131px;
+		}
+	}
+	.closestShop {
+		position: relative;
+	    margin: 0 10px 0px 23px;
+        float: left;
+        width: 244px;
+        background: rgba(236, 236, 236, 0.26);
+        padding: 20px;
+        .shopMap {
+        	height: 100px;
+        }
+        .milesAway {
+            display: block;
+            font-size: 12px;
+            margin: 5px 0 10px;
+            font-weight: normal;
+        }
+	    h3 {
+	        font-weight: normal;
+	        margin-bottom: 10px;
+
+	        span {
+	        	display: block;
+	        	margin-top: 10px;
+	            font-weight: bold;
+	        }
+	    }
+	    > div {
+	        margin: 20px 0 25px 0;
+	        line-height: 19px;
+	    }
+	    a {
+	        color: $grey;
+	    }
+	    .tooltip {
+	    	width: 200px;
+	    }
+	    &.delivery {
+	    	h2 {
+	    		font-weight: bold;
+	    		margin-bottom: 5px;
+	    	}
+	    	h3 {
+	    		font-size: 14px;
+	    		margin-bottom: 0;
+	    		font-weight: bold;
+	    	}
+	    	.address {
+	    		margin-top: 10px;
+	    	}
+	    }
+	    &:hover  {
+	    	.tooltip {
+	    	    visibility: visible;
+    	        opacity: 1;
+    	        top: -63px;
+    	        left: 40%;
+    	        margin-left: -76px;
+    	        z-index: 999;
+    	        font-size: 12px;
+    	        span {
+    	        	font-weight: bold;
+    	        }
+	    	}
+	    }
+	}
+	.shippingMethods.download {
+		p {
+			text-align: left;
+			font-size: 14px;
+			font-weight: bold;
+			margin-left: 140px;
+			line-height: 5px;
+			margin-top: 6px;
+		}
+	}
+
+
+	.discounts {
+		h2 {
+			margin-bottom: 20px;
+
+		}
+
+		> div > h2 {
+			@extend %hint;
+		}
+	}
+
+	.discountContainer {
+		width: 282px;
+		margin-right: 10px;
+
+		&.card {
+			width: 365px;
+			margin-right: 0;
+			
+			.inputContainer {
+				width: 74%;
+				float: left;
+			}
+			#giftCardNum {
+				width: 60%;
+			}
+			#pINum {
+				width: 38%;
+			}
+			button {
+				width: 24%;
+			}
+			.errorSummary {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+				text-align: center;
+				h2 {
+					display: none;
+				}
+			}
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	.rewardCardSection {
+		border: 1px solid $lightBorderGrey;
+		width: 100%;
+		float: left;
+		margin: 20px 0;
+		background: white;
+		padding: 20px;
+
+		
+
+		label {
+			display: inline-block;
+			width: 50%;
+			float: left;
+			padding-right: 2%;
+			margin-top: 13px;
+		}
+		input[type=text] {
+			float: left;
+			width: 20%;
+		}
+		input[type=submit] {
+			float: right;
+			width: 28%;
+			font-size: 17px;
+		}
+	}
+	.paymentDelivery {
+		border: 1px solid $lightBorderGrey;
+		background: white;
+		float: left;
+		overflow: hidden;
+		padding: 20px;
+		width: 100%;
+	}
+	.deliveryContainer, .paymentContainer {
+		width: 48%;
+		display: inline-block;
+		float:left;
+	}
+	#gameWalletSection {
+		float: left;
+		background: white;
+		border: 1px solid $lightBorderGrey;
+		width: 100%;
+		padding: 20px;
+		margin-top: 20px;
+	}
+	
+	.discountContainer, 
+	#basket .reward {
+		min-height: inherit;
+	}
+	
+	.deliveryContainer {
+		float: left;
+		overflow: hidden;
+		position: relative;
+		p {
+			margin: 20px 0;
+		}
+		h3 {
+			margin-bottom: 10px;
+		}
+		.home {
+			margin: 20px 0;
+
+		}
+		.closestShop {
+			margin-top: 0px;
+		}
+		.address {
+			line-height: 18px;
+			
+		}
+		.addressSelection {
+			margin-top: 20px;
+		}
+		select {
+			width: 53%;
+			display: inline-block;
+		}
+		.or {
+			display: inline-block;
+			margin: 0 5px;
+		}
+		.btn {
+
+		}
+		.closestShop {
+			margin-left: 0;
+		}
+		.vcard, .vcard_default {
+			background: rgba(236, 236, 236, 0.26);
+			padding: 20px;
+		}
+
+		input[name="deliveryDetailsUpdate"]{
+			display: none;
+		}
+	}
+
+	.paymentContainer {
+		float: right;
+		background: white;
+		overflow: hidden;
+		position: relative;
+		#payNow  > p {
+			margin: 20px 0;
+		}
+		.currentPaymentMethod {
+			background: rgba(236, 236, 236, 0.26);
+			padding: 20px;
+			margin-bottom: 20px;
+			.cardNumber {
+				font-weight: bold;
+			}
+		}
+		.billingAddress {
+			margin-top: 20px;
+			h3 {
+				margin-bottom: 10px;
+				font-size: 14px;
+			}
+			.vcard {
+				line-height: 18px;
+			}
+		}
+		
+		.requiredInfo {
+		    position: absolute;
+		    right: 0;
+		    top: 5px;
+		    font-size: 12px;
+		    span {
+		        color: red;
+		    }
+		}
+		#paymentDetailsUpdate {
+			display: none;
+		}
+		.CVV {
+			position: relative;
+			margin-top: 20px;
+			line-height: 42px;
+			#fieldCV2_2 {
+				width: 20%;
+				margin-left: 13px;
+			}
+			&:after {
+		        position: absolute;
+		        content: "*";
+		        color: red;
+		        top: -10px;
+		        right: 46%;
+		        line-height: normal;
+		    }
+		}
+		.payBreakdown {
+			.card {
+				> span {
+					margin: 20px 0;
+					width: 100%;
+					display: block;
+				}
+				
+			}
+		}
+		.change {
+			margin-bottom: 12px;
+			select {
+				width: 53%;
+				display: inline-block;
+			}
+			.or {
+				display: inline-block;
+				width: 4%;
+				margin: 0 5px;
+			}
+		}
+		.alternativeMethods {
+			margin-top: 20px;
+		}
+		.selectAlternative {
+			text-align: center;
+			margin-top: 20px;
+			.field {
+				display: inline-block;
+				position: relative;
+				input {
+					width: 100%;
+				}
+				&.paypal {
+					margin-right: 14px;
+				    position: relative;
+				    top: -13px;
+				}
+				&.wallet {
+				    width: 189px;
+				}
+				.disabled {
+					pointer-events: none;
+					opacity: 0.4;
+				}
+				.tooltip {
+					top: -65px;
+				}
+				&:hover .tooltip {
+					visibility: visible;
+				}
+			}
+		}
+	}
+	
+
+	.confirmOrder {
+		width: 100%;
+		float: left;
+		.tandcContainer {
+			border-top: 1px solid #ECECEC;
+			padding-top: 20px;
+			float: left;
+			width: 100%;
+			overflow: hidden;
+			margin-top: 27px;
+
+		}
+		.tandc {
+			width: 71%;
+			float: left;
+			line-height: 18px;
+			span.required {
+				color: red;
+			}
+		}
+		.payNowContainer {
+			width: 25%;
+			float: right;
+			#placeOrder {
+				width: 100%;
+				padding: 20px;
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+			.btn.disabled {
+				width: 100%;
+				padding: 20px 0;
+				font-size: 20px;
+			}
+
+		}
+
+	}
+	.checkout-box.age-restrictions {
+		border: 1px solid $lightBorderGrey;
+		background: white;
+		padding: 20px;
+		margin-bottom: 20px;
+		p {
+			font-size: 20px;
+		}
+		div.required {
+			width: 50%;
+			select {
+				width: 100%;
+			}
+			&:after {
+				top: 36px !important;
+				right: -18px;
+			}
+		}
+		.indicator {
+			margin: 20px 0 10px;
+			float: left;
+		}
+		.fieldError {
+			font-size: 12px;
+			margin-top: 6px;
+			color: red;
+			display: block;
+		}
+	}
+}
+
+
+#pgExpressDelivery {
+	#mainContent {
+		width: 64%;
+	}
+
+	
+
+	#newDelivery {
+		display: inline-block;
+		width: 100%;
+		padding: 20px;
+
+		h2, 
+		p {
+			margin-bottom: 15px;
+		}
+
+		input[type=submit], 
+		.btn {
+			float: right;
+		}
+		input[type="submit"].findAddress {
+			
+			font-size: 14px;
+			@extend %secondaryBtn;
+
+		}
+
+		input[name="postCodeUnknown"] {
+			background-color: transparent;
+			color: $grey;
+			text-transform: none;
+			padding: 0;
+			display: inline-block;
+			text-align: right;
+			float: right;
+			font-weight: normal;
+		}
+
+		.field {
+			display: inline-block;
+			width: 100%;
+			vertical-align: top;
+		}
+		.field.notReceiver {
+			height: 140px;
+			label {
+				font-size: 16px;
+				display: block;
+			}
+			input {
+				float: left;
+				margin-top: 17px;
+				font-size: 14px;
+			    text-transform: none;
+			    font-weight: normal;
+				@extend %secondaryBtn;
+
+			}
+		}
+		p.return {
+			margin-top: -33px;
+			a {
+				color: $grey;
+				font-size: 14px;
+				text-decoration: none;
+				&:before {
+					content: "<";
+				}
+			}
+		}
+		#giftMessage {
+			> p {
+				margin-bottom: 40px;
+				overflow: hidden;
+				input {
+					display: none;
+				}
+			}
+			.field {
+				margin-bottom: 26px;
+				.indicator {
+					float: left;
+					text-align: right;
+					margin: 15px 10px 0 0;
+					width: 27%;
+				}
+				.element {
+					float: left;
+					width: 59%;
+					> select, input, > textarea  {
+						width: 100%
+					}
+
+				}
+				&.required:after {
+					top: -8px;
+				}
+			}
+			.info {
+				float: left;
+				margin-top: 40px;
+				#characterCount {
+					display: none;
+				}
+			}
+		}
+		.labeledInputs div.required:after {
+			top: 12px;
+			right: 68px;
+		}
+	}
+
+	
+}
+
+#pgBasket .rewardCardSection .reward {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#newPayment {
+	#existingAddress.labeledInputs {
+		> div {
+			padding-top: 0;
+			&.addressFields {
+				padding-right: 0;
+			}
+		}
+
+	}
+	.addNewContainer {
+		text-align: right;
+		padding-right: 80px;
+		margin-top: 20px;
+		.or {
+			display: inline-block;
+			margin-right: 21px;
+		}
+	}
+	.addressSelectedContainer, .addCardBottomContainer {
+		padding-top: 39px;
+		margin-top: 40px;
+		border-top: 1px solid $lightBorderGrey;
+		input {
+			width: 50%;
+			float: right;
+		}
+	}
+	.section > div.addressFields {
+		overflow: hidden;
+		width: 100%;
+		padding-top: 20px;
+		margin-top: 40px;
+		border-top: 1px solid $lightBorderGrey;
+		height: auto;
+		.labeledInputs {
+			width: 100%;
+			height: auto;
+
+		}
+	}
+	.labeledInputs .field.fieldError .errorMessage {
+		margin-left: 37%;
+	}
+	.section.billingAddress .addressFields .labeledInputs {
+		>div {
+			//padding-right: 0;
+			&.required {
+
+			}
+		}
+	}
+	input[name="postCodeUnknown"] {
+		display: none;
+	}
+	.noPostCode input[name="postCodeUnknown"] {
+		display: block;
+	}
+	p.return {
+		margin-top: 40px;
+		a {
+			color: $grey;
+			font-size: 14px;
+			text-decoration: none;
+			&:before {
+				content: "<";
+			}
+		}
+	}
+}
+
+#helpPanel {
+	padding: 20px;
+	width: 34%;
+	float: right;
+	background-color: white;
+	border: 1px solid #ECECEC;
+	margin-bottom: 70px;
+	h3 {
+		font-weight: normal;
+		font-size: 20px;
+		
+	}
+	ul {
+		margin: 20px 0;
+		li {
+			margin-bottom: 5px;
+		}
+	}
+	a {
+		color: $grey;
+	}
+	p {
+		line-height: 20px;
+	}
+}

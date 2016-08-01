@@ -1,0 +1,43 @@
+{
+  // created by NArshad @ Salmon for Game Project
+
+  // For use with JSHint Gutter which can be installed 
+  // via Sublime Package Manager if JSHint is installed.
+  // jshint.com/install
+  // Can be adapted for any JSHint/JSLint uses on Game
+  // including use in any editor or any grunt/gulp tasks.
+
+  // last modified 19/07/2016
+
+  "browser": true,
+  "devel": true,
+  "esversion": 3,
+  "eqeqeq": false,
+  "funcscope": true,
+  "globals": {
+    "Salmon": true,
+    "App": true,
+    "$": true,
+    "jQuery": true,
+    "Configuration": true,
+    "Game": true,
+    "cmDisplayRecs": true,
+    "ko": true,
+    "JSON": true,
+    "PluckSDK": true,
+    "Adoro": true,
+    "Cufon": true,
+    "cmCreatePageviewTag": true,
+    "ActiveXObject": false,
+    "google": true,
+    "cmRecRequest": true,
+    "HomeFranchises": true,
+    "LimelightPlayer": true
+  },
+  "strict": false,
+  "supernew": true,
+  "sub": false,
+  "undef": true,
+  "unused": true,
+  "jquery": true
+}

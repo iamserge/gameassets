@@ -1,0 +1,158 @@
+.searchContainer {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.navbarSearch {
+	padding: 8px 0px;
+
+	button {
+		width: auto;
+	}
+
+	.inputContainer {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		width: 100%;
+	}
+
+	input[type=text] {
+		padding: 6px 10px 6px 10px;
+		width: 100%;
+		height: 35px;
+		background: transparent;
+		z-index: 100;
+		color: $lightGrey;
+		background: white;
+		font-size: 16px;
+	}
+
+	.searchLabel {
+		@extend %visuallyHidden;
+	}
+
+	#searchButton {
+		display: inline-block;
+		position: absolute;
+		right: 2px;
+		top: 2px;
+		height: 32px;
+	    width: 35px;
+		text-align: center;
+		font-size: 16px;
+		z-index: 100;
+		color: black;
+		background-color: white;
+		border: none;
+		cursor: pointer;
+		background-size: 20px;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0.6;
+		@include transition(opacity, .3s);
+		@extend %icon_search_black;
+		span {
+			@extend %visuallyHidden;
+		}
+		
+
+		
+	}
+	&:hover #searchButton{
+		opacity: 1;
+	}
+}
+
+/**
+*
+* Search Results
+*
+
+
+#searchResults {
+	position: absolute;
+	left: 0;
+	top: -400px;
+	background: white;
+	width: 100%;
+	z-index:50;
+	margin-top: 0;
+	@include box-shadow(0, 0, 10px, 5px, rgba(0, 0, 0, 0.1));
+	@include transition(all, $defTranTime);
+
+	.container {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: Absolute;
+			top: -3px;
+			height: 3px;
+			background: white;
+			z-index: 100;
+			width: 100%;
+		}
+	}
+
+	.searchTerm {
+		color: black;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 20px 0 10px;
+
+		span {
+			color: $purple;
+		}
+	}
+
+	.noResults {
+		color: black;
+		text-align: center;
+		font-size: 1.4em;
+		margin: 0 auto;
+		display: none;
+	}
+
+	.loader {
+		text-align: center;
+		display: block;
+		position: static;
+		margin: 0 auto 30px auto;
+		width: 100px;
+	}
+
+	ul {
+		padding: 20px;
+		display:none;
+	}
+
+	li {
+		width: percentage(1 / 6);
+		float: left;
+		color: black;
+		text-align: center;
+
+		img {
+			width: 90%;
+			height: auto;
+			margin: 0 auto 20px;
+		}
+	}
+
+	a {
+		font-size: 13px;
+		color: $grey;
+		text-decoration: none;
+		line-height: 17px;
+		font-weight: normal;
+		text-align: left;
+		span {
+			text-align: center;
+			width: 100%;
+			display: inline-block;
+			padding-bottom: 20px;
+		}
+	}
+}
+*/

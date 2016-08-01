@@ -1,0 +1,139 @@
+.videoBanners {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    height: 315px;
+    overflow: hidden;
+    .slides {
+        width: 500%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .slide {
+            position: relative;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            float: left;
+            overflow: hidden;
+            .link {
+                display: block;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                img {
+                    margin: auto;
+                    position: absolute;
+                    left: 50%;
+                    @include translate(-50%, 0)
+                   
+                }
+            }
+        }
+    }
+    
+
+
+    .carouselPrev,
+    .carouselNext {
+        background-size: 14px;
+        @extend %carouselArrows;
+    }
+    
+    .pager {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        text-align: center;
+        z-index:100;
+        ul {
+            text-align:center;
+            width:auto;
+            background:white;
+            display:inline-block;
+            padding:5px;
+            line-height:0;
+            li {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                background: #999;
+                margin:0 5px;
+                @include borderRadius(50%);
+                &.active {
+                    background: $purple;
+                }
+            }
+        }
+    }
+    .limeLightContainer {
+        visibility:  hidden;
+        opacity: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 200;
+        @include transition(opacity, .3s);
+        object {
+            display: block;
+            width: 560px;
+            height: 100%;
+            margin: 0 auto;
+
+        }
+        .closeVideo {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 7px 12px;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            margin-left: 280px;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+        
+        }
+        &.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .playVideoButton {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 0;
+        opacity: 0.8;
+        @include transition(opacity, .3s);
+        &:after {
+            content: " ";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            margin-left: 15px;
+            border-width: 25.5px 0 25.5px 34px;
+            border-color: transparent transparent transparent #ffffff;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+

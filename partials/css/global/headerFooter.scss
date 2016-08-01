@@ -1,0 +1,50 @@
+/**
+ *
+ * Global Includes
+ *
+ */
+
+@import "includes/reset";
+@import "globalIncludes";
+@import "includes/global";
+@import "includes/errors";
+@import "includes/rating";
+
+
+/**
+  *
+  * Global Partials
+  *
+  */
+
+@import 'partials/header';
+@import 'partials/headerSearch';
+@import 'partials/headerNavRight';
+@import 'partials/breadcrumbs';
+@import 'partials/footer';
+@import 'partials/statusIndicator';
+@import 'partials/platformLogo';
+@import "partials/signPosts";
+@import "partials/slider";
+@import "partials/ioRecsSlider";
+
+/**
+ *
+ * Media Overwrite Includes
+ *
+ */
+
+@import "media/desktop";
+@import "media/tablet";
+@import "media/mobile";
+
+
+
+/**
+ *
+ * Espots
+ *
+ */
+
+@import "partials/espots/main";
+ 

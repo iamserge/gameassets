@@ -1,0 +1,232 @@
+@include tabletLandscape {
+
+	body.checkout {
+		.container, #content {
+			width: 100%;
+		}
+		.wrapper {
+			padding: 0 20px;
+		}
+	}
+
+
+//
+// Basket Page
+//
+	#basket {
+		> form {
+			display: inline-block;
+			width: 100%;
+			padding: 0 20px;
+		}
+
+		.basketTotals {
+			width: 100%;
+			text-align: right;
+			margin-bottom: 20px;
+			padding: 30px 20px;
+
+			> div span {
+				margin-left: 10px;
+			}
+		}
+
+		#signIn {
+			margin-top: 0;
+			clear: both;
+		}
+	}
+
+	.anon {
+		.basketTotals ~ .discountContainer, 
+		#basket .basketTotals ~ .reward {
+			width: calc(50% - 10px);
+			width: -webkit-calc(50% - 10px);
+			width: -ms-calc(50% - 10px);
+			margin: 0 0 20px;
+		}
+
+		.discountContainer {
+			float: right;
+		}
+	}
+
+	.basketSummary {
+		th, 
+		td {
+			width: auto;
+
+			&:last-of-type {
+				padding-right: 20px;
+			}
+		}
+
+		th {
+			&:first-of-type {
+				padding-left: 20px;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+
+		td {
+			&:first-of-type {
+				width: 90px;
+			}
+
+			&:nth-of-type(2) {
+				width: 40%;
+			}
+
+			&:nth-of-type(4) {
+				width: 160px;
+				padding: 0;
+			}
+		}
+	}
+
+	#orderSummary .basketItems .item {
+		.imageHolder {
+			width: 20%;
+
+			img {
+				width: 100%;
+			}
+		}
+		.details {
+			width: 70%;
+			margin: 0;
+			padding-left: 10px;
+		}
+	}
+
+
+
+//
+// Sign In Modal
+//
+	#checkoutSignIn {
+		.modalContent {
+			width: 728px;
+			margin-left: -364px;
+		}
+	}
+
+	.guestCheckout, 
+	.registeredCheckout {
+		padding: 20px 20px 80px;
+
+		.btn {
+			right: 20px;
+		}
+	}
+
+	.registeredCheckout .btn {
+		width: 324px;
+	}
+
+
+
+//
+// Express Checkout
+//
+	.express {
+		.deliveryGroupTitle td {
+			padding: 0;
+		}
+
+		.discountContainer {
+			width: calc(50% - 10px);
+			width: -webkit-calc(50% - 10px);
+			width: -ms-calc(50% - 10px);
+			margin: 0 0 20px;
+		}
+
+		#eVoucherSection {
+			float: right;
+		}
+
+		#giftCardSection {
+			width: 100%;
+		}
+
+		.rewardCardSection {
+			margin-top: 0;
+		}
+
+		.deliveryOptions {
+			padding-right: 20px;
+
+			&:first-of-type {
+				margin: 0;
+			}
+		}
+
+		.deliveryOptions, 
+		.closestShop {
+			margin: 0;
+			width: 33.333%;
+		}
+
+		.deliveryContainer {
+			select {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+
+	}
+
+	#pgExpressDelivery #newDelivery {
+		.findAddressContainer {
+			text-align: center;
+		}
+	}
+
+
+
+//
+// Express Checkout
+//
+	.confirm {
+		.orderConfirmation, 
+		.basketSummary, 
+		.totalsContainer {
+			width: calc(100% - 40px);
+			width: -webkit-calc(100% - 40px);
+			width: -ms-calc(100% - 40px);
+			margin: 0 0 20px 20px;
+		}
+	}
+
+
+
+//
+// My Details
+//
+	#myDetails {
+		.reward {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.labeledInputs div.required:after {
+		right: 8%;
+	}
+
+
+
+//
+// Delivery
+//
+	.deliveryOrCollection {
+		> div {
+			padding: 15px 10px;
+			font-size: 13px;
+		}
+	}
+
+}

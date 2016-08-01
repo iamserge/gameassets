@@ -1,0 +1,22 @@
+#pgEditPersonalDetails {
+    form {
+        width: 80%;
+        margin-left: 5%;
+    }
+    #primary ul.action {
+        width: 68%;
+        float: right;
+        @extend %clearfix;
+        li {
+            width: 49%;
+            float: left;
+            > * {
+                width: 100%;
+                margin: 0;
+            }
+            &:first-child {
+                margin-right: 2%;
+            }
+        }
+    }
+}

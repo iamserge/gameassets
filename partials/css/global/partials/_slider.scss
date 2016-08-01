@@ -1,0 +1,95 @@
+.sliderContainer {
+    position: relative;
+    width: 86%;
+    margin: 5px auto 0;
+    .slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        margin: 0 auto;
+        > ul {
+            position: relative;
+            @extend %clearfix;
+            height: 100%;
+            margin: 0 auto;
+            > li {
+                float: left;
+                height: 100%;
+                /* &:first-child {
+                    a > * {
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    a > * {
+                        padding-right: 0;
+                    }
+                } */
+            }
+        }
+        img {
+            width: auto;
+            height: 100%;
+            padding: 0 5px;
+        }
+    }
+    .carouselPrev,
+    .carouselNext {
+        position: absolute;
+        margin-top: -39px;
+        width: 20px;
+        line-height: 45px;
+        text-align: center;
+        color: #c2c2c2;
+        font-size: 12px;
+        border: 1px solid #eae9e9;
+        cursor: pointer;
+        z-index: 100;
+
+        span {
+            text-indent: -9999px;
+            display: inline-block;
+        }
+        &.inactive {
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+    .carouselPrev {
+
+        @extend %icon_leftarrow_black;
+    }
+    .carouselNext {
+        @extend %icon_rightarrow_black;
+    }
+    .pager {
+         position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            text-align: center;
+            z-index:100;
+        ul {
+            text-align:center;
+            width:auto;
+            background:white;
+            display:inline-block;
+            padding:5px;
+            line-height:0;
+            li {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                background: #999;
+                margin:0 5px;
+                cursor: pointer;
+                @include borderRadius(50%);
+                &.active {
+                    background: $purple;
+                }
+            }
+        }
+    }
+}

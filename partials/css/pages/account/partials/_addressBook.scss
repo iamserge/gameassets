@@ -1,0 +1,113 @@
+#pgAddressBook #content {
+
+    div#myAccountLHS h3 {
+        font-size: 20px;
+        color: $grey;
+    }
+    h2 {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.2em;
+        text-transform: none;
+        float: left;
+        width: 70%;
+        color: $grey;
+        margin-bottom: 40px;
+    }
+    h4.notdefault {
+        display: none;
+    }
+    form#setDefaultAddressForm {
+        clear: both;
+        h3 {
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0 0 10px 0;
+        }
+    }
+    #primary #myAccountPanel {
+        > p {
+            width: 100%;
+            float: left;
+            margin-top: -20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    .formSep {
+        position: relative;
+    }
+    #primary {
+        ul.topAction {
+            width: auto;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            @extend %clearfix;
+        }
+        ul.savedAddresses {
+            li.addressDetails {
+                @extend %clearfix;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                border-bottom: 1px solid $lightBorderGrey;
+                &:last-child {
+                    border-bottom: 0;
+                    padding: 0;
+                    margin-bottom: 0;
+                }
+                ul.action {
+                    input[type="radio"] {
+                        width: 10%;
+                        padding: 0!important;
+                        margin: 0;
+                    }
+                    label {
+                        float: left;
+                        width: 90%;
+                        margin-bottom: 20px;
+                    }
+                    li {
+                        margin-bottom: 10px;
+                    }
+                }
+                
+            }
+            .info,
+            .options {
+                float: left;
+                width: 31%;
+                margin-right: 2%;
+            }
+        }
+        ul.adr li {
+            margin-bottom: 4px;
+        }
+    }
+    input.findAddress {
+        margin-top: 10px;
+    }
+    .noPostCode {
+        width: 68%;
+        margin-left: 32%;
+        input.buttonLink {
+            background: white;
+            border-style: solid;
+            border-width: 1px;
+            border-color: $lightBorderGrey;
+            color: $grey;
+            font-weight:bold;
+            @extend %btn;
+            &:hover {
+                background: $lightBorderGrey;
+            }
+        }
+    }
+   
+    #addressForm1 {
+        .callToAction {
+            width: 200px;
+            margin: 0 0 20px 32%;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+/**
+ *
+ * Global Includes
+ *
+ */
+
+@import "../../global/globalIncludes";
+
+/**
+  *
+  * Global Partials
+  *
+  */
+
+@import 'partials/main';
+@import 'partials/breadcrumbs';
+@import 'partials/orderSummary';
+@import 'partials/deliveryDetails';
+@import 'partials/paymentDetails';
+@import 'partials/myDetails';
+@import 'partials/basket';
+@import 'partials/signIn';
+@import 'partials/confirmation';
+
+
+@import 'partials/expressCheckout';
+@import 'partials/3dsecure';
+
+/**
+ *
+ * Media Overwrite Includes
+ *
+ */
+
+@import "media/desktop";
+@import "media/tablet";
+@import "media/mobile";

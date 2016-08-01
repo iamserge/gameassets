@@ -1,0 +1,85 @@
+span.closeModal {
+    background: $grey;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute!important;
+    border: 3px solid white;
+    right: -15px;
+    top: -15px;
+    color: white;
+    font-size: 14px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.modal {
+    opacity: 0;
+    @include transition(opacity, 0.2s);
+    visibility: hidden;
+    div > iframe,
+    div > img {
+        z-index: 90;
+        position: relative;
+    }
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+    >div {
+        padding: 20px;
+    }
+   
+    .error {
+        padding: 20px 100px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 29px;
+    }
+    .modalContent .loader {
+        padding: 20px 20px;
+        margin: -31px 0 0 -20px;
+        z-index: 10;
+        position: absolute!important;
+    }
+    h2,
+    h3,
+    p,
+    .sellerLogo {
+        margin-bottom: 10px;
+    }
+    .indicator {
+        margin-top: 15px;
+        float: left;
+        width: 30%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .element {
+        float: left;
+        width: 68%;
+        margin-left: 2%;
+    }
+    .field {
+        position: relative;
+        margin-bottom: 20px;
+        @extend %clearfix;
+    }
+    select,
+    textarea {
+        width: 100%;
+    }
+    .marketplaceMessageAction {
+        margin-left: 32%;
+        input {
+            @extend %primaryBtn;
+        }
+    }
+    .overlayContentWrapper {
+        display:block;
+    }
+}
+
+.overlayContentWrapper {
+    display:none;
+}

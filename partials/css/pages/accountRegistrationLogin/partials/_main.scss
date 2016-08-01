@@ -1,0 +1,112 @@
+ #content {
+    max-width: 1200px;
+     h1 {
+         margin: 40px 0;
+         font-size: 25px;
+     }
+     h2,
+     h3 {
+         color: $grey;
+         margin-bottom: 20px;
+         font-size: 21px;
+         font-weight: bold;
+
+     }
+     p {
+         margin-bottom: 20px;
+         line-height: 1.4em;
+     }
+     a {
+         color: $purple;
+         text-decoration: none;
+         &:hover {
+             text-decoration: underline;
+         }
+     }
+     select,
+     input {
+         width: 100%;
+     }
+     .primary {
+         text-align: right;
+     }
+     input.login {
+         @extend %primaryBtn;
+         width: auto;
+     }
+     .indicator {
+         margin-bottom: 10px;
+     }
+     .formSepContainer {
+         background: white;
+         padding: 20px;
+         margin-bottom: 20px;
+         &:last-child {
+             margin-bottom: 60px;
+         }
+     }
+     .formSep {
+         border: 1px solid $lightBorderGrey;
+         padding: 20px;
+         position: relative;
+         .noMatch {
+             margin: 20px 0;
+             line-height: 18px;
+         }
+         .radioList {
+             label[for="addressOptions"] {
+                 margin-top: 15px;
+                 float: left;
+                 width: 30%;
+                 text-align: right;
+             }
+             select {
+                 float: left;
+                 width: 68%;
+                 margin-left: 2%;
+             }
+         }
+         #selectMultiAddress {
+             display: none;
+         }
+         .noPostCode {
+             input {
+                 margin: 10px 0 20px;
+                 font-size: 14px;
+                 color: #333;
+                 font-weight: bold;
+                 @extend %btn;
+                 border: 1px solid $lightBorderGrey;
+                 &:hover {
+                     background: $lightBorderGrey;
+                 }
+             }
+         }
+     }
+     span.fieldError {
+         margin: 10px 0 0 0;
+         display: block;
+         color: red;
+         text-align: left;
+         clear: both;
+         font-size: 12px;
+     }
+     .userAddress span.fieldError {
+        width: 71%;
+        float: right;
+     }
+     label {
+         margin-top: 7px;
+         display: block;
+         span {
+             display: none;
+         }
+     }
+     
+ }
+
+
+#myAccountPanel {
+    background: white;
+    padding: 20px;
+}

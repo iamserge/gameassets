@@ -1,0 +1,135 @@
+.ioContainer {
+    overflow: hidden;
+    padding-bottom: 20px;
+    background-color: white;
+
+    h2 {
+        padding: 20px;
+        border-bottom: 1px solid $lightBorderGrey;
+        span {
+            opacity: 0.6;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    .bottomLink {
+        color: $purple;
+        float: right;
+        margin: 16px 26px 0 0;
+        text-decoration: none;
+        font-weight: bold;
+        span {
+            margin-left: 7px;
+            text-decoration: none;
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+        }
+    }
+    &.multiple {
+        .IORecsSlider {
+            display: none;
+            &.active  {
+                display: block;
+            }
+        }
+    }
+}
+
+.IORecsSlider {
+    position: relative;
+    .loader {
+        position: static;
+        margin: 20px auto 0;
+        display: block;
+        width: 220px;
+    }
+}
+.IOsliderContainer {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    .slidesWindow {
+        width: 95%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .slides {
+        width: 500%;
+        overflow: hidden;
+        position: relative;
+        li {
+            float: left;
+            width: 240px;
+            text-align: center;
+            padding: 20px 0 0;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: $grey;
+                h3 {
+                    margin: 20px 0;
+                    padding: 0 20px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    font-weight: normal;
+                    height: 38px;
+                }
+                .image {
+                    height: 120px;
+                    position: relative;
+                    img {
+                        max-height: 100%;
+                        vertical-align: middle;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto;
+                    }
+                }
+                .platformLogo  {
+                    display: none;
+                }
+                .rating {
+                    &.ratingHide {
+                        display: none;
+                    }
+                }
+                .price {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .carouselPrev, .carouselNext {
+        @extend %carouselArrows;
+        border: 1px solid $lightBorderGrey;
+        height: 50%;
+        top: 25%;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+#pgMyAccount .ioContainer {
+    float: left;
+    width: 100%;
+    margin: 50px 0 100px;
+
+    h3 {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .platformLogo {
+        color: $grey;
+    }
+
+}

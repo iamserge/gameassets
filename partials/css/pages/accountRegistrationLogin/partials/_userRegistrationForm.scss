@@ -1,0 +1,465 @@
+#pgRegistration {
+    .newUserEntry {
+        float: left;
+        width: 54%;
+        background: white;
+        margin-bottom: 80px;
+    }
+    .rewardCardEntry {
+        padding: 20px;
+        background: white;
+        float: right;
+        width: 44%;
+    }
+    .rewardCardEntryWrapper {
+        padding: 20px;
+        border: 1px solid $lightBorderGrey;
+    }
+    #primary {
+        h2 {
+            clear: both;
+            display: block;
+            color: $grey;
+            font-size: 21px;
+
+        }
+    }
+    .userEmail {
+        margin-bottom: 40px;
+    }
+    .userAddress {
+        .field {
+            margin-right: 23px;
+            > label {
+                width: 27%;
+                margin-top: 12px;
+            }
+            > input, > select {
+                width: 71%;
+            }
+        }
+        > .postCode.required {
+            &:before {
+                content: '*';
+                font-size: 16px;
+                color: red;
+                position: absolute;
+                right: -20px;
+                top: -6px;
+                clear: both;
+                display: block;
+                visibility: visible;
+            }
+        }
+    }
+    #registrationFormPart2,
+    #registrationForm,
+    {
+        h3 {
+            color: $grey;
+            font-size: 21px;
+            margin-bottom: 32px;
+        }
+    }
+    #registrationForm {
+        input.next {
+            width: auto;
+        }
+        input[name="submitRewardCard"] {
+            @extend %primaryBtn;
+            width: auto;
+        }
+        .findAddressContainer {
+            overflow: hidden;
+        }
+        input.findAddress {
+            float: right;
+            @extend %primaryBtn;
+            width: auto;
+            margin: 20px 25px 20px 0;
+        }
+    }
+    .required .element:after {
+        top: -9px;
+    }
+    input[name="doChangeCountry"] {
+        display: none;
+    }
+    .manuallyContainer {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    input[name="postCodeUnknown"] {
+        float: right;
+        color: $grey;
+        font-size: 14px;
+        margin-right: 20px;
+        
+    }
+    .indicator {
+        margin-top: 6px;
+        float: left;
+        width: 26%;
+        text-align: right;
+    }
+    .element {
+        float: left;
+        width: 68%;
+        margin-left: 2%;
+    }
+    .field {
+        position: relative;
+        margin-bottom: 20px;
+        @extend %clearfix;
+        &.select.date {
+            clear: both;
+            .element {
+                select {
+                    width: 32%;
+                    margin-right: 2%;
+                    float: left;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                label {
+                    display: none;
+                }
+            }
+        }
+        p {
+            input.buttonLink {
+                position: relative;
+                top: -6px;
+            }
+        }
+        > label {
+            margin-top: 6px;
+            float: left;
+            width: 30%;
+            text-align: right;
+        }
+        > input,
+        > select {
+            float: left;
+            width: 68%;
+            margin-left: 2%;
+        }
+        &.country label {
+            margin-top: 14px;
+        }
+        &.houseNumber,
+        &.postCode {
+            label {
+                margin-top: 12px;
+                float: right;
+            }
+            input {
+                float: right;
+            }
+        }
+        &.houseNumber {
+            label {
+                margin-top: 4px;
+            }
+        }
+    }
+    .buttonLink,
+    .createAccount,
+    input[type="checkbox"] {
+        width: auto;
+    }
+    /* .buttonLink,
+    input[type="submit"] {
+        @extend %primaryBtn;
+        margin-top: 10px;
+    } */
+    .createAccount {
+        @extend %primaryBtn;
+    }
+    .radioList.addresses {
+        > div {
+            overflow: hidden;
+        }
+    }
+    .checkbox {
+        .indicator {
+            float: left;
+            width: auto;
+        }
+        .element {
+            float: left;
+            margin-left: 10px;
+            width: auto;
+        }
+    }
+    .title {
+        clear: both;
+        margin: 10px 0 40px;
+        ul {
+            margin: 0 0 15px 20px;
+            li {
+                list-style-type: disc;
+                color: $purple;
+                margin-bottom: 5px;
+                span {
+                    color: $grey;
+                }
+            }
+        }
+        > p {
+            display: none;
+        }
+    }
+    .postCode ul.action {
+        clear: both;
+        margin-top: 20px;
+    }
+    .newUserEntry {
+        h2 {
+            color: $purple;
+            font-size: 2.3em;
+        }
+    }
+
+    .lookupBox {
+        @extend %clearfix;
+        .field {
+            clear: both;
+        }
+        .houseNumber {
+
+        }
+    }
+    input.next {
+        @extend %primaryBtn;
+    }
+    div#errorSummary {
+        margin-bottom: 10px;
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: $saleRed;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    }
+    .advice {
+        display: inline-block;
+        width: 72%;
+        float: right;
+        @extend %clearfix;
+        margin-top: 10px;
+    }
+    .errorMessage {
+        float: right;
+        width: 68%;
+        color: red;
+        margin-top: 10px;
+    }
+    .country input[type="submit"] {
+        margin-top: 10px;
+    }
+    .userName .field {
+        margin-bottom: 20px;
+    }
+    .addressFields {
+        .field {
+
+            &.required {
+                &:before {
+                    content: '*';
+                    font-size: 16px;
+                    color: red;
+                    position: absolute;
+                    right: -20px;
+                    top: -6px;
+                    clear: both;
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    &.postOrder {
+        margin-bottom: 80px;
+        #primary {
+            background: white;
+            padding: 20px;
+            form {
+                border: 1px solid $lightBorderGrey;
+                padding: 20px;
+                > fieldset {
+                    width: 50%;
+                    margin-left: 5%;
+                }
+                .rewardCardNo {
+                    .tooltip-checkout {
+                        display: none;
+                    }
+                }
+                .field.select.date .element select {
+                    margin-right: 1%;
+                }
+            }
+        }
+    }
+}
+
+.required .element {
+    position: relative;
+    &:after {
+        content: '*';
+        font-size: 16px;
+        color: red;
+        position: absolute;
+        right: -15px;
+        top: 17px;
+    }
+}
+
+body.registration1 {
+    form {
+        width: 98%;
+    }
+    .noPostCode {
+        text-align: right;
+        overflow: hidden;
+        margin: -25px 22px 0 0;
+    }
+    .buttonLink {
+        right: 20px;
+        background: none;
+        border: 0;
+        color: $purple;
+        cursor: pointer;
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+body.registration2 #registrationForm {
+    /* #primary {
+      
+        #registrationForm {
+            padding: 20px;
+            border: 1px solid $lightBorderGrey;
+        }
+    } */
+    /* 
+    #registrationFormPart2 {
+         form {
+            width: 60%;
+            margin-left: 5%;
+        }
+    } */
+    .formSepFields {
+        width: 50%;
+        margin-left: 5%;
+        .field:last-child {
+            margin-bottom: 10px;
+        }
+    }
+    select#personTitle {
+        width: auto!important;
+    }
+    .formSepAddress .formSep {
+        position: relative;
+        .formSepFields  {
+            margin-left: 0;
+        }
+        .buttonLink {
+            position: absolute;
+            right: 20px;
+            background: none;
+            border: 0;
+            color: $grey;
+            cursor: pointer;
+            font-weight: bold;
+            outline: 0;
+            bottom: 20px;
+            @extend %btn;
+            border: 1px solid $lightBorderGrey;
+            &:focus {
+                outline: 0;
+            }
+            &:hover {
+                background: $lightBorderGrey;
+            }
+        }
+        p {
+            margin-bottom: 0;
+            background-color: $lightBackgroundGrey;
+            padding: 20px;
+        }
+    }
+    .formSepNewsletter {
+        .formSepFields {
+            width: 100%;
+            margin-left: 0;
+        }
+        .field {
+            margin-bottom: 0;
+        }
+        .indicator {
+            width: auto;
+        }
+        .element {
+            width: auto;
+        }
+    }
+    .element.checkbox .indicator {
+        margin: 0!important;
+    }
+    input#newsletter {
+        margin-top: 9px;
+    }
+}
+
+#pgRegistrationSuccess {
+    .formSepContainer {
+        float: right;
+        width: 68%;
+        margin-top: 36px;
+    }
+    .next ul {
+        width: 30%;
+        margin-bottom: 60px;
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            padding: 17px 13px;
+            background: white;
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: $purple;
+        }
+    }
+}
+
+ul#loginSection .login {
+    margin-top: 20px;
+}
+
+body.registration2 #primary #registrationForm .formSepAddress .formSep .formSepFields > h2 {
+    display: none;
+}
+
+.requiredInfo {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    span {
+        color: red;
+    }
+}

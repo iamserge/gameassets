@@ -1,0 +1,41 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
+//@import url(//img.game.co.uk/fonts/GAME-UI-2016-Mob/font-GAME-UI-2016-Mob.00.css);
+
+/* include fonts */
+
+%openSans {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+}
+%openSansText {
+	font-family: 'Open Sans', sans-serif;
+}
+%helvetica {
+	font-family: 'Helvetica Neue', Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+
+%gameIconFont {
+	//font-family:"GAME-UI-2016-Mob-v00"!important;
+	font-weight:normal;
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+// PX TO EM CONVERTOR em(16)
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}

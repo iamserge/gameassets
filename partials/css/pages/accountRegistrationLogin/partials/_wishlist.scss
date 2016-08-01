@@ -1,0 +1,59 @@
+#pgWishListSearch {
+    .message .formSepContainer {
+        margin-bottom: 20px;
+    }
+    #content {
+        ul:not(.action) {
+            margin-left: 30px;
+            li {
+                list-style: disc;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .formSepContainer.loginNewContainer {
+        float: left;
+        width: 49%;
+        input.login {
+            margin-top: 20px;
+        }
+    }
+    .wlright {
+        float: right;
+        width: 49%;
+        input.search {
+            margin: 20px 0;
+            width: auto;
+            @extend %primaryBtn;
+        }
+        ul#registerSection a {
+            margin: 20px 0;
+            @extend %primaryBtn;
+        }
+    }
+}
+
+#pgWishListResults {
+    input.search,
+    input.sendEmail {
+        margin: 20px 0;
+        width: auto;
+        @extend %primaryBtn;
+    }
+    .wlinvite {
+        float: left;
+        width: 49%;
+    }
+    .wlsearch {
+        float: right;
+        width: 49%;
+    }
+    form#WishListInvitationForm {
+        em {
+            display: block;
+        }
+        textarea {
+            margin-bottom: 20px;
+        }
+    }
+}

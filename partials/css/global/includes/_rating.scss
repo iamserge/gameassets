@@ -1,0 +1,52 @@
+.rating {
+	width: 95px;
+	height: 20px;
+	position: relative;
+	display: inline-block;
+
+	&:after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 50;
+		left: 0;
+		background-size: 100%;
+		background-image: url(../prototypes/img/stars.png);
+		background-repeat: no-repeat;
+	}
+
+	&:before {
+		content: '';
+		left: 0;
+		width: 0;
+		background-color: $purple;
+		height: 100%;
+		position: absolute;
+	}
+
+	&.rating1:before, &.rating10:before {
+		width: percentage(1/5);
+	}
+	&.rating2:before, &.rating20:before {
+		width: percentage(2/5);
+	}
+	&.rating3:before, &.rating30:before {
+		width: percentage(3/5);
+	}
+	&.rating4:before, &.rating40:before {
+		width: percentage(4/5);
+	}
+	&.rating5:before, &.rating50:before {
+		width: percentage(5/5);
+	}
+
+	span {
+		display: inline-block;
+		text-indent: -99999px;
+		&.total {
+			color: $grey;
+			margin-left: 5px;
+		}
+	}
+}

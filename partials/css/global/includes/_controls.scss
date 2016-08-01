@@ -1,0 +1,151 @@
+%input {
+    @include borderRadius(5px);
+    @include placeholder {
+        color: $grey;
+    }
+    line-height:1.4em;
+    border:0;
+    outline:0;
+    &:focus {}
+}
+
+%btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    padding: 13px 20px;
+    border: none;
+    text-decoration: none;
+    @extend %openSansText;
+    &.primary {
+        background-color: $purple;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline-block;
+        &:hover {
+            text-decoration: none;
+            background-color: $lightPurple;
+        }
+    }
+    &.secondary {
+        border: 1px solid $outofstockGrey;
+        background: white;
+        color: $grey;
+        &:hover {
+            background: $outofstockGrey;
+        }
+    }
+}
+%secondaryBtn {
+    border: 1px solid $outofstockGrey;
+    background: white;
+    color: $grey;
+    &:hover {
+        background: $outofstockGrey;
+    }
+}
+%primaryBtn {
+    
+    background-color: $purple;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    @extend %btn;
+}
+
+%mainBtn {
+    padding: 20px;
+    font-size: 18px;
+}
+
+%ratingStarsNew {
+    float: left;
+    width: 95px;
+    height: 20px;
+    position: relative;
+    &:after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 50;
+        left: 0;
+        background-size: 100%;
+        background-image: url(../prototypes/img/stars.png);
+        background-repeat: no-repeat;
+    }
+    &:before {
+        content: '';
+        left: 0;
+        width: 0;
+        background-color: $purple;
+        height: 100%;
+        position: absolute;
+    }
+    &.rating05:before {
+        width: percentage(0.5/5);
+    }
+    &.rating1:before,&.rating10:before {
+        width: percentage(1/5);
+    }
+    &.rating15:before {
+        width: percentage(1.5/5);
+    }
+    &.rating2:before, &.rating20:before {
+        width: percentage(2/5);
+    }
+    &.rating25:before {
+        width: percentage(2.5/5);
+    }
+    &.rating3:before, &.rating30:before {
+        width: percentage(3/5);
+    }
+    &.rating35:before {
+        width: percentage(3.5/5);
+    }
+    &.rating4:before, &.rating40:before {
+        width: percentage(4/5);
+    }
+    &.rating45:before {
+        width: percentage(4.5/5);
+    }
+    &.rating5:before, &.rating50:before {
+        width: percentage(5/5);
+    }
+    span {
+        display: inline-block;
+        &.total {
+            color: $grey;
+            margin-left: 5px;
+        }
+    }
+}
+
+ %secondaryBtnNew {
+     display: block;
+     margin: 0 auto;
+     @extend %btn;
+     border: 1px solid $lightBorderGrey;
+     color: $grey;
+     &:hover {
+         background: $lightBorderGrey;
+     }
+     .loginSaveSeller {
+         color: $lightBorderGrey;
+         pointer-events: none;
+     }
+ }

@@ -1,0 +1,30 @@
+#pgSRewardCardBalance {
+    h1 {
+        display: none;
+        &.displayNew {
+            display: block;
+        }
+    }
+    #myAccountPanel {
+        h2 {
+            font-size: 14px;
+            color: $grey;
+        }
+    }
+}
+
+#pgRewardCardProgramme {
+    ul.action {
+        width: 68%;
+        margin-left: 32%;
+        @extend %clearfix;
+    }
+    input[type="submit"] {}
+    .rewardCardIntro ul {
+        margin-left: 30px;
+        li {
+            list-style: disc;
+            margin-bottom: 10px;
+        }
+    }
+}

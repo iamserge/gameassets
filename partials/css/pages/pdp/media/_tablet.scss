@@ -1,0 +1,141 @@
+@include tabletLandscape {
+
+	main {
+		width: 60%;
+
+	}
+	aside {
+		width: 38%;
+	}
+	.section .title {
+		font-size: 14px;
+		h2 {
+			font-size: 14px;
+		}
+	}
+	#screenshotsModal .modalContent{
+		width: 80%;
+		left: 10%;
+		margin-left: 0;
+		img {
+			width: 100%;
+		}
+	}
+	.section.product .leftCol {
+		width: 50%;
+	}
+	.section.product .rightCol {
+		width: 48%;
+	}
+	.thumbSliderContainer .thumbSlider ul li {
+		width: 50px;
+	}
+	.section.buyingOptions ul.tabLinks li {
+		width: 40%;
+		font-size: 14px;
+	}
+	.section.buyingOptions .addToWishlist, .section.buyingOptions .addToBasket {
+		width: 100%;
+	}
+	.section.descContent .info .sku,
+	.section.descContent .info .cert, 
+	.section.descContent .info .customerRating,
+	.section.descContent .info .genre {
+		width: 50%;
+		> div {
+			width: 100%;
+		}
+	}
+	.section.rewardPoints {
+	    padding: 20px 0px 20px 36px;
+	    background-position: 5%;
+	}
+	.section.buyingOptions .addToWishlist {
+		margin-top: 10px;
+		br {
+			display: none;
+		}
+		&:before {
+			top: 3px;
+		}
+	}
+	.section.freqBought .main > a.rec h3, .section.recentlyViewed .main > a.rec h3 {
+		font-size: 14px;
+		line-height: 15px;
+	}
+	.section.product .imgContainer {
+		height: 210px;
+	}
+	.section.deliveryInfo .inner > div {
+		width: 80%;
+		&.cc {
+			padding-top: 10px;
+			margin-top: 10px;
+			border-top: 1px solid $lightBorderGrey;
+			&:after {
+			    top: 6px;
+			}
+		}
+	}
+	.section.moreBuyingOptions .main > div {
+		padding-bottom: 73px;
+		position: relative;
+		.image, .price {
+			width: 50%;
+		}
+		.image a {
+			position: absolute;
+			bottom: 9px;
+		}
+		.addBasket {
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			span {
+				float: right;
+			}
+			.btn {
+				width: 100%;
+				padding: 5px 0;
+			}
+		}
+		&:last-child {
+			padding-bottom: 73px;
+		}
+	}
+	#basketOverlay .modalContent, #sellerDetails .modalContent  {
+		width: 96%;
+		left: 1%;
+	    margin-left: 0;
+	}
+	.section.buyingChoices .price span.value {
+		font-size: 14px;
+	}
+	.section.buyingChoices ul.tabLinks li {
+		width: 27%;
+	}
+	.section.buyingChoices .selectContainer .selected, .section.buyingChoices .selectContainer .dropdown {
+		width: 90px;
+	}
+
+	.section.buyingChoices .content table tbody tr > td:nth-child(2), 
+	.section.buyingChoices .content table tbody tr > td:nth-child(3),
+	.section.buyingChoices .content table tbody tr > td:nth-child(4) {
+		padding: 20px 10px;
+	}
+
+	.section.buyingChoices .content table tbody tr > td:nth-child(3) img {
+		display: none;
+	}
+	.section.buyingChoices .content table tbody tr > td {
+		font-size: 12px;
+	}
+	.section.buyingChoices .content table tbody tr > td .btn{
+		padding: 10px 12px;
+		font-size: 12px;
+	}
+	.section.buyingChoices .content table tbody tr > td table td {
+		padding: 0 !important;
+	}
+}
+

@@ -1,0 +1,261 @@
+.platformLogo {
+	font-size: 0;
+	&:after {
+		content: '';
+		height: 30px;
+		display:inline-block;
+		width:80px;
+		background-size:contain;
+		background-position:right; 
+		background-repeat:no-repeat;
+	}
+
+	
+
+	&.CLOTHING:after, &.SPORTSSUPPORTERSGEAR:after, &.CLOTHINGANDMERCHANDISE:after, &.CLOTHINGANDMERCHANDISE:after{
+	 @extend %icon_clothing; 
+	}
+	&.PC:after, &.PCGAMESANDDOWNLOADS:after, &.PCGAMES:after, &.PC-GAMES:after, &.PCSOFTWARE:after, &.PCGAME:after, &.PCGAMES:after, &.PCGAMES:after, &.PCGAMES:after, &.PCWINDOWS:after{
+	 @extend %icon_pc; 
+	}
+	&.BOOKS:after, &.STRATEGYGUIDESANDBOOKS:after, &.STRATEGYGUIDES:after, &.STRATEGYGUIDESBOOKS:after, &.STRATEGY:after, &.STRATEGYGUIDEANDBOOKS:after, &.STRATEGYGUIDESANDBOOKS:after, &.STRATEGYGUIDESANDBOOKS:after{
+	 @extend %icon_books; 
+	}
+	&.SPORTSFOOTBALL:after, &.SPORTSTEAMSPORTS:after{
+	 @extend %icon_football; 
+	}
+	&.PHONES:after, &.MOBILEPHONES:after, &.DEVICES:after, &.MOBILE:after{
+	 @extend %icon_phones; 
+	}
+	&.BLU-RAY:after, &.BLU-RAY:after, &.BLURAY:after, &.BLURAY:after, &.BLURAY:after, &.BLLU-RAY:after{
+	 height: 23px;
+	 @extend %icon_bluray; 
+	}
+	&.DVD:after, &.DVD:after{
+	 @extend %icon_dvd; 
+	}
+	&.RETROCONSOLES:after, &.RETROHANDHELDS:after, &.TOYSANDGADGETS:after, &.CONSOLE:after, &.MOBILEGAMES:after, &.CONSOLES:after, &.RETRO:after, &.TOYSANDGADGET:after, &.TOYSANDGAGDETS:after, &.CONSOLES:after, &.TOYANDGADGETS:after{
+	 @extend %icon_console; 
+	}
+	&.POSTERS:after, &.WALLART:after{
+	 @extend %icon_posters; 
+	}
+	&.TABLET:after, &.E-READERS:after{
+	 @extend %icon_tablet; 
+	}
+	&.XBOX360:after, &.XBOX360:after, &.XBOX-360:after, &.XB360:after, &.XBOX360:after, &.XBOX360DOWNLOAD:after, &.XBOX360:after, &.XBOX360:after, &.MICROSOFTXBOX360:after, &.XB360:after, &.XB360:after, &.XBOX360:after, &.XBOX360:after{
+	 @extend %icon_xbox360; 
+	}
+	&.TRADITIONALGAMES:after, &.PUZZLESANDBOARDGAMES:after, &.TRAVELANDBOARDGAMES:after{
+	 @extend %icon_boardgames; 
+	}
+	&.PCDOWNLOADS:after, &.TOPUPS:after, &.CODEUNLOCK:after, &.DOWNLOADS:after, &.DIGITAL:after, &.DOWNLOAD:after, &.PCDOWNLOAD:after{
+	 @extend %icon_download; 
+	}
+	&.PS3:after, &.PLAYSTATION3:after, &.PLAYSTATION3:after, &.PLAYSTATION-3:after, &.SONYPS3:after, &.PLAYSTATION-3:after, &.PLAYSTATION3DOWNLOAD:after, &.PLAYSTAION3:after, &.PLAYSTATION3:after, &.PLAYSTATION3:after{
+	 @extend %icon_ps3; 
+	}
+	&.FIGURINESANDSETS:after, &.MEMORABILIA:after, &.SCALEDMODELS:after, &.FIGURINES:after, &.COLLECTABLES:after{
+	 @extend %icon_figures; 
+	}
+	&.WII:after, &.NINTENDOWII:after, &.NINTENDO-WII:after, &.NINTENDOWIIMINI:after, &.WIIGAMES:after, &.WIIGAMES:after, &.WIIMINI:after{
+	 margin-top: 9px;
+	 height: 19px;
+	 @extend %icon_wii; 
+	}
+	&.NDS:after, &.NINTENDODS:after, &.DS:after, &.GAME.DS:after, &.GAMES.DS:after, &.NINTENDODS3DS:after, &.NINTENDODSIANDDSLITE:after{
+	 @extend %icon_ds; 
+	}
+	&.HOME-TABLEWARE:after, &.HOME-ACCESSORIES:after, &.HOME-KITCHEN:after, &.HOMEBAKEWARE:after, &.HOME-LEISURE:after{
+	 @extend %icon_homeware; 
+	}
+	&.ACCESSORIES:after, &.AUDIO:after, &.MUSICCD:after, &.MUSIC:after, &.HEADPHONES:after, &.ACCESSORIES:after, &.ACCESSOIRES:after, &.ACESSORIES:after{
+	 @extend %icon_audio; 
+	}
+	&.ELECTRONICS:after, &.ELECTONICS:after, &.ELECTRONIC:after, &.ELECTRONCIS:after, &.ELECTRONICSRMATCODE:after, &.ELECTRONICS:after,  &.ELECRTONICS:after, &.ELECTRONCS:after, &.ELECTRONICS:after, &.ELECTRONICSCODE:after, &.ELECTRONICS:after{
+	 @extend %icon_electronics; 
+	}
+	&.INSTRUMENTS:after{
+	 @extend %icon_instruments; 
+	}
+	&.I3DS:after, &.NINTENDO3DS:after{
+	 @extend %icon_3ds;
+	}
+	&.VINYL:after, &.MULTIFORMATANDUNIVERSAL:after, &.GAME:after, &.GAMES:after, &.DISCREPAIR:after, &.FILMS:after, &.FILMMUSIC:after, &.CD:after, &.DISCCARE:after{
+	 @extend %icon_disc; 
+	}
+	&.XBOXONE:after, &.XBOXONE:after, &.XBOX-ONE:after, &.XBOXONEDOWNLOAD:after{
+		width: 85px;
+	 @extend %icon_xboxone; 
+	}
+	&.PS4:after, &.PLAYSTATION4:after, &.PLAYSTATION4:after, &.PLAYSTATION-4:after, &.PLAYSTATION4PS4:after, &.PLAYSTATION4DOWNLOAD:after{
+	 @extend %icon_ps4; 
+	}
+	&.PRESCHOOLTOYS:after{
+	 @extend %icon_toys; 
+	}
+	&.SOFTTOYS:after, &.TOYS:after, &.TOYSANDMERCHANDISE:after, &.TOYSANDFIGURINES:after{
+	 @extend %icon_softtoys; 
+	}
+	&.PSP:after, &.PSPORTABLE:after{
+	 @extend %icon_psp; 
+	}
+	&.DSIANDDSLITE:after, &.DSIANDDSLITE:after, &.DSIDSLITE:after, &.DSIANDDSLITE:after{
+	 @extend %icon_dsi; 
+	}
+	&.PLAYSTATION2:after, &.PS2:after, &.PLAYSTATION2:after{
+	width:70px;
+	 @extend %icon_ps2; 
+	}
+	&.GIFTS:after, &.BRANDGIFTVOUCHERS:after, &.GIFTSANDGADGETS:after, &.GIFTBOXES:after, &.GIFTWRAP:after, &.GIFTCARDS:after, &.GIFTEXPERIENCES:after, &.GIFT:after, &.GIFTSANDGADGETS:after{
+	 height: 23px;
+	 @extend %icon_gifts; 
+	}
+	&.CAMERAANDPHOTO:after, &.CAMERASANDPHOTOGRAPHY:after{
+	 @extend %icon_photo; 
+	}
+	&.WIIU:after, &.WII-U:after, &.NINTENDOWIIU:after, &.WIIUAND3DS:after, &.WIIU:after{
+		margin-top: 9px;
+		height: 19px;
+	 @extend %icon_wiiu; 
+	}
+	&.KEYRINGS:after{
+	 @extend %icon_keyrings; 
+	}
+	&.PSVITA:after, &.PS-VITA:after, &.PLAYSTATIONVITA:after, &.PSPVITA:after, &.VITA:after{
+	 @extend %icon_psvita; 
+	}
+	&.SKYLANDERS:after{
+	 @extend %icon_skylanders; 
+	}
+	&.XBOX:after, &.XBOX:after, &.XBOX2013:after, &.XBOX:after{
+	 @extend %icon_xbox; 
+	}
+	&.TRADINGCARDS:after, &.TOYSANDGADGETS.TRADINGCARDS:after{
+	 @extend %icon_cards; 
+	}
+	&.CONFECTIONERY:after{
+	 @extend %icon_confec; 
+	}
+	&.COMPUTING:after, &.LAPTOPS:after{
+	 @extend %icon_laptops; 
+	}
+	&.UMDMOVIES:after, &.UMD:after{
+	 @extend %icon_umd; 
+	}
+	&.TVANDHOMECINEMA:after{
+	 @extend %icon_tv; 
+	}
+	&.STATIONARY:after{
+	 @extend %icon_stationary; 
+	}
+	&.BADGES:after{
+	 @extend %icon_badges; 
+	}
+	&.GAMEBOYADVANCE:after, &.GAMEBOYADVANCE:after, &.GBA:after{
+	 @extend %icon_gba; 
+	}
+	&.XBOXLIVE:after, &.XBOXLIVEARCADE:after, &.XBOXLIVEADDON:after, &.XBOXLIVE15:after, &.XBOXLIVE25:after, &.XBOXLIVE50:after{
+	 @extend %icon_xboxlive; 
+	}
+	&.BLOCKSANDBRICKS:after{
+	 @extend %icon_bricks; 
+	}
+	&.SPORTSCAMPINGANDHIKING:after{
+	 @extend %icon_camping; 
+	}
+	&.GAMECUBE:after, &.GAMECUBE:after{
+	 @extend %icon_ngc; 
+	}
+	&.PLAYSTATIONNETWORK:after{
+	 @extend %icon_psn; 
+	}
+	&.GREETINGCARDS:after{
+	 @extend %icon_greeting; 
+	}
+	&.INFINITY:after, &.DISNEYINFINITY:after{
+	 @extend %icon_disneyinfinity; 
+	}
+	&.SPORTSSCOOTERS:after{
+	 @extend %icon_scooters; 
+	}
+	&.AMIIBO:after, &.AMIIBO:after{
+	 @extend %icon_amiibo; 
+	}
+	&.FREETOPLAY:after, &.FREE2PLAY:after{
+	 @extend %icon_f2p; 
+	}
+	&.PARTYSUPPLIES:after{
+	 @extend %icon_party; 
+	}
+	&.MAC:after, &.APPLEMAC:after, &.MAC:after{
+	 @extend %icon_aplmac; 
+	}
+	&.HD-DVD:after, &.HDDVD:after{
+	 @extend %icon_hddvd; 
+	}
+	&.SPORTSFITNESS:after, &.SPORTSTECHNOLOGY:after, &.SPORTSRUNNING:after, &.HEATHANDPERSONALCARE:after, &.HEALTHDRINKS:after{
+	 @extend %icon_health; 
+	}
+	&.XBOX360KINECT:after{
+	 @extend %icon_xboxkinect; 
+	}
+	&.LEGODIMENSIONS:after, &.LEGODIMENSIONS:after{
+	 @extend %icon_legodimensions; 
+	}
+	&.SATNAVS:after{
+	 @extend %icon_satnav; 
+	}
+	&.SPORTSCYCLING:after{
+	 @extend %icon_cycling; 
+	}
+	&.SPORTSSKATEBOARDS:after{
+	 @extend %icon_skateboards; 
+	}
+	&.PS1:after, &.PS:after{
+	 @extend %icon_ps; 
+	}
+	&.GAMEFESTTICKETS:after, &.TICKETS:after{
+	 @extend %icon_ticket; 
+	}
+	&.ESHOP:after{
+	 @extend %icon_eshop; 
+	}
+	&.SPORTSWINTERSPORTS:after{
+	 @extend %icon_wintersports; 
+	}
+	&.NINTENDO2DS:after, /*&.2DS:after,*/ &.NENTENDO2DS:after, &.NINTINDO2DS:after{
+	 @extend %icon_2ds; 
+	}
+	&.STEAMCREDIT:after, &.STEAMCURRENCY:after{
+	 @extend %icon_steam; 
+	}
+	&.GAMESTICK:after{
+	 @extend %icon_gamestick;
+	}
+	&.GAMEDROID:after{
+	 @extend %icon_gamedroid; 
+	}
+	&.OUYA:after, &.OUYA:after{
+	 @extend %icon_ouya; 
+	}
+	&.GAMEBOY:after{
+	 @extend %icon_gameboy; 
+	}
+	&.VIRTUALTOYS:after, &.VIRTUALREALITY:after{
+	 @extend %icon_vr; 
+	}
+	&.NOWTV:after{
+	 @extend %icon_nowtv; 
+	}
+	&.SKYPECARDS:after{
+	 @extend %icon_skype; 
+	}
+	&.IPAD:after{
+	 @extend %icon_ipad; 
+	}
+	&.MEGADRIVE:after{
+	 @extend %icon_megadrive; 
+	}
+
+}

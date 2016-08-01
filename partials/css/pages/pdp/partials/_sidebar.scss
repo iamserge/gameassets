@@ -1,0 +1,436 @@
+.section.rewardPoints {
+    position: absolute;
+    top: 0;
+    padding: 20px 20px 20px 82px;
+    font-weight: bold;
+    text-align: center;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 21%;
+    background-repeat: no-repeat;
+    background-size: 36px;
+    @extend %icon_reward_purple;
+}
+.section.buyingOptions {
+    padding: 20px;
+    ul.tabLinks {
+        border: 0;
+        li {
+            padding: 10px 0px;
+            width: 33.33%;
+            text-align: center;
+            border-top: 1px solid $lightBorderGrey;
+            float: left;
+            font-size: 18px;
+            &.current {
+
+            }
+            &:first-child {
+                border-left: 1px solid $lightBorderGrey;
+            }
+            &.newLink {
+                width: 33.33%;
+            }
+        }
+        &:after {
+            content:" ";
+            display: block;
+            clear: both;
+        }
+
+    }
+    .tabs {
+        > div {
+            padding: 20px;
+            border: 1px solid $lightBorderGrey;
+            clear: both;
+            > div {
+                margin: 10px 0;
+                @extend %clearfix;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .wasNow {
+        .was, .wasPrice {
+            text-decoration: line-through;
+        }
+        .wasFromDate, .wasHyphen, .wasToDate  {
+            display: none;
+        }
+    }
+    .buttons {
+        position: relative;
+        
+    }
+    .saleRed {
+        color: $saleRed;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    h2 {
+        float: left;
+        font-size: 30px;
+        margin: 10px 10px 10px 0;
+    }
+
+    .gamePointsContainer {
+        float: right;
+        position: relative;
+        > span {
+            display: inline-block;
+            width: 54px;
+            height: 31px;
+            color: white;
+            text-align: center;
+            text-indent: 11px;
+            line-height: 44px;
+            font-size: 12px;
+            font-weight: bold;
+            @extend %icon_reward_purple;
+        }
+        .tooltip {
+            right: 0;
+            top: 48px;
+            &:before, &:after {
+                left: 92%;
+            }
+        }
+        &:hover .tooltip {
+            display: block;
+        }
+        
+        
+    }
+    .addToWishlistContainer {
+        position: relative;
+        width: 25%;
+        height: 46px;
+        float: left;
+        .addToWishlist {
+            width: 100%;
+        }
+        &:hover .tooltip {
+            display: block;
+            top: 62px;
+            left: -81px;
+        }
+    }
+    .addToWishlist {
+        position: relative;
+        border: 1px solid $borderGrey;
+        width: 25%;
+        float: left;
+        padding: 8px 0px 6px 28px;
+        font-size: 11px;
+        &:before {
+            position: absolute;
+            content: " ";
+            left: 6px;
+            font-size: 16px;
+            top: 12px;
+            color: $borderGrey;
+            width: 23px;
+            height: 18px;
+            background-size: 100%;
+            @extend %icon_wishlist;
+        }
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            position: relative;
+            
+        }
+
+
+    }
+    .addToBasket {
+        width: 70%;
+        float: right;
+        font-size: 20px;
+        padding: 10px 0 8px;
+    }
+    .options {
+        > div {
+            float: left;
+            &:first-child {
+                border-right: 1px solid $lightBorderGrey;
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .soldBy {
+        span {
+            font-weight: bold;
+        }
+    }
+    button.checkStock {
+        background: white;
+        padding: 3px 0;
+        width: 100%;
+        border: 1px solid black;
+        font-size: em(12);
+    }
+}
+
+
+.section.deliveryInfo {
+    padding: 20px;
+    text-align: center;
+    .inner {
+        border: 1px solid $lightBorderGrey;
+        padding: 10px;
+        > div {
+            display: inline-block;
+            padding: 0 13px;
+            margin: 0 0px;
+            position: relative;
+            cursor: pointer;
+            .tooltip {
+                left: 50%;
+                margin-left: -120px;
+                top: 48px;
+                p {
+                    margin: 10px 0;
+                }
+            }
+            &:before {
+                content:" ";
+                display: inline-block;
+                width: 21px;
+                height: 17px;
+                background-size: 100%;
+                position: relative;
+                top: 4px;
+                margin-right: 10px;
+            }
+            &:after {
+                content: " ";
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background-size: 100%;
+                position: absolute;
+                top: -2px;
+                right: -2px;
+                opacity: 0.7;
+                @extend %infoIcon;
+            }
+            &.delivery:before {
+                @extend %icon_delivery_purple;
+            }
+            &.cc:before {
+                @extend %icon_clickcollect_purple;
+            }
+            &:hover {
+                .tooltip {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+}
+.section.releaseDate {
+    padding: 20px;
+    > div {
+        padding: 20px 0;
+        text-align: center;
+        border: 1px solid $lightBorderGrey;
+    }
+
+}
+.section.moreBuyingOptions {
+    display: none;
+    padding: 20px;
+    > div:first-child {
+        padding-bottom: 0;
+    }
+    .main {
+        > div {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $lightBorderGrey;
+            &:last-child {
+                border: 0;
+                margin: 0;
+                padding: 0;
+            }
+            > div {
+                float: left;
+            }
+        }
+        .image {
+            width: 25%;
+            a {
+                clear: both;
+                display: block;
+                font-size: 12px;
+            }
+        }
+        .price {
+            width: 27%;
+            position: relative;
+            .condition.info {
+                background-repeat: no-repeat;
+                background-position: left;
+                padding-left: 20px;
+                background-size: 16px;
+                @extend %icon_info_black;
+            }
+            .tooltip {
+                left: -113px;
+                top: 56px;
+                display: none;
+            }
+            &:hover .tooltip {
+                display: block;
+            }
+            > * {
+                display: block;
+            }
+        }
+        .addBasket {
+            width: 40%;
+            span {
+                margin-top: 5px;
+                font-size: 12px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: left;
+                padding-left: 30px;
+                background-size: 16px;
+                @extend %icon_delivery_purple;
+            }
+        }
+    }
+    button {
+        padding: 5px 0;
+        width: 100%;
+        font-size: 12px;
+    }
+    .seeAll {
+        text-align: center;
+        padding-top: 10px;
+        a {
+            font-weight: bold;
+            color: $purple;
+        }
+    }
+}
+
+.section.freqBought, .section.recentlyViewed {
+    padding: 20px;
+    h2 {
+        font-size: 18px;
+    }
+    .main {
+        position: relative;
+        > a.rec {
+            display: block;
+            text-decoration: none;
+            color: $grey;
+            margin-bottom:10px;
+            padding-bottom:10px;
+            border-bottom:1px solid $lightBorderGrey;
+
+
+            &:last-child {
+                border:0;
+                padding:0;
+                margin:0;
+            }
+            @extend %clearfix;
+            > div {
+                width: calc(100% - 96px);
+                float: right;
+            }
+            h3 {
+                font-weight: normal;
+                margin-bottom: 6px;
+                margin-bottom: 16px;
+                line-height: 20px;
+            }
+            .image {
+                width: 74px;
+                float: left;
+                img {
+                    width: 100%;
+                }
+            }
+            .platformLogo {
+                display: block;
+                line-height: 10px;
+                margin-top: 10px;
+            }
+        }
+        .loader {
+            background-size: 25px;
+            text-indent: -9999px;
+            width: 25px;
+            padding: 0;
+            height: 25px;
+            bottom: 9px;
+            top: auto;
+            right: 50%;
+            left: auto;
+            margin-right: -12px;
+            position: absolute;
+        }
+    }
+
+    .rating {
+        float:none;
+        display:inline-block;
+        &.ratingHide {
+            display: none;
+        }
+    }
+
+    .save {
+        display:block;
+        margin-top: 20px;
+        color:$saleRed;
+        font-weight:bold;
+    }
+    .price {
+        display:block;
+        font-weight:bold;
+        font-size:16px;
+        margin-top: 6px;
+    }
+}
+
+.section.deliveryCountdown {
+    padding: 20px;
+    p {
+        padding: 10px;
+        border: 2px solid $purple;
+        text-align: center;
+        span { 
+            font-weight: bold;
+            color: $purple;
+        }
+        &.before {
+
+        }
+        &.after {
+            padding: 10px 70px;
+        }
+    }
+}
+
+aside .espot {
+    width:100%;
+    margin-bottom:20px;
+    img {
+        width:100%;
+    }
+}

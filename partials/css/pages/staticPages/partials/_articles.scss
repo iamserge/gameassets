@@ -1,0 +1,89 @@
+#pgArticle {
+	#primary {
+		float: left;
+		
+		width: calc(100% - 420px);
+		float: left;
+		background: white;
+		padding: 20px;
+		h1 {
+			margin: 10px 0 20px;
+		}
+		h2 {
+			margin-bottom: 20px;
+		}
+		.footerCTA {
+			color: #333;
+			background: none;
+			overflow: hidden;
+			width: auto;
+			height: auto;
+			a {
+				color: $grey;
+				@extend %btn;
+				@extend %secondaryBtn;
+			}
+		}
+	}
+	#secondary {
+		float: right;
+	    width: 400px;
+		background: white;
+		padding: 20px;
+		h4 {
+			border: 1px solid $lightBorderGrey;
+		    font-size: 18px;
+		    padding: 20px;
+		    font-weight: bold;
+		}
+
+		#productLister {
+			border-left: 1px;
+		    border-right: 1px;
+		    border-bottom: 1px;
+		    border-color: $lightBorderGrey;
+		    border-style: solid;
+		    padding: 20px;
+		}
+		.product {
+			.productInfoDisplay {
+				overflow: hidden;
+				.imageHolder {
+					width: 74px;
+					float: left;
+				}
+				.overview {
+					width: calc(100% - 96px);
+					float: right;
+					a {
+						text-decoration: none;
+						color: $grey;
+						font-size: 18px;
+					}
+					.platform {
+						margin: 5px 0 13px;
+						display: block;
+					}
+					.moreinfo {
+						a {
+							font-size: 14px;
+							font-weight: bold;
+							text-decoration: none;
+						}
+					}
+				}
+				.moreDetails {
+					float: right;
+					width: calc(100% - 96px);
+					margin-top: 10px;
+					a {
+						color: $grey;
+						text-decoration: none;
+						font-weight: bold;
+					}
+				}
+				
+			}
+		}
+	}
+}

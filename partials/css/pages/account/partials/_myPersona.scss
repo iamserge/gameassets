@@ -1,0 +1,25 @@
+#pgMyProfile {
+    .tabs {
+    	float:left;
+    	width:30%;
+    	margin-bottom:60px;
+        li {
+            margin-bottom: 10px;
+            a {
+                padding: 17px 13px;
+                background: white;
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                color: $purple;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    a#ctab04, a#ctab05 {
+        display:none;
+    }
+}

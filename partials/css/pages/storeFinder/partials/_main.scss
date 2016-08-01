@@ -1,0 +1,205 @@
+ #content {
+     a {
+         color: $purple;
+     }
+     h1 {
+        color: $grey;
+        margin: 40px 0;
+        font-size: 25px;
+     }
+     h2 {
+         color: $grey;
+         margin-bottom: 20px;
+         font-size: 14px;
+     }
+     h3 {
+         color: $grey;
+         font-size: 20px;
+         display: none;
+     }
+     p {
+         margin-bottom: 20px;
+         line-height: 1.4em;
+     }
+     li.back,
+     li.print {
+         display: none;
+     }
+ }
+ 
+ #primary {
+     padding: 20px;
+     background: white;
+     margin-bottom: 80px;
+     @extend %clearfix;
+     .storeLocatorContent {
+         float: left;
+         width: 60%;
+         p {
+             font-size: 20px;
+             font-weight: bold;
+             color: $grey;
+         }
+     }
+     .indicator {
+         float: left;
+         width: 20%;
+         text-align: right;
+         margin-bottom: 10px;
+     }
+     .element {
+         float: left;
+         width: 68%;
+         margin-left: 2%;
+     }
+     li.addressline {
+         line-height: 1.2em;
+     }
+     div#aToZList {
+         margin: 40px 0 0;
+         ol {
+             margin: 10px 0;
+         }
+         li {
+             display: inline-block;
+             a {
+                 font-size: 20px;
+                 font-weight: bold;
+                 margin-right: 5px;
+             }
+         }
+     }
+     #roiSpot {
+        display: none;
+     }
+     input[type="text"] {
+         background: white;
+         border: 1px solid $lightBorderGrey;
+         color: $grey;
+         text-align: left;
+         width: 100%;
+         &:hover {
+             border-color: $grey;
+         }
+     }
+     input[type="submit"] {
+         background-color: $purple;
+        text-indent: -9999px;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 50px;
+        padding: 21px 0 8px;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+        @extend %icon_search_white;
+        &:hover {
+            text-decoration: none;
+            background-color: $lightPurple;
+        }
+        &.disabled {
+            pointer-events: none;
+            background-color: $lightGrey;
+        }
+     }
+     ul.action {
+         text-align: right;
+     }
+     #locatorEspot {
+         float: right;
+         width: 35%;
+     }
+     a.roiText {
+         display: block;
+         margin: 10px 0;
+     }
+     .storeLocatorResults {
+         width: 100%;
+         background: white;
+         padding: 20px;
+         margin-bottom: 80px;
+         fieldset {
+             width: 60%;
+         }
+         p.titleStore {
+             font-size: 20px;
+         }
+         p {
+             font-size: 14px;
+             margin-bottom: 10px;
+         }
+     }
+     #errorSummary {
+         display: none;
+     }
+     ul.stores {
+         border: 1px solid $lightBorderGrey;
+         padding: 20px;
+         display: block;
+         margin-right: 20px;
+         li {
+             display: inline-block;
+             margin-bottom: 10px;
+             width: 100%;
+             a {
+                 font-weight: normal;
+                 font-size: 16px;
+             }
+             span {
+                 line-height: 1.2em;
+             }
+         }
+     }
+     label {
+         margin-top: 12px;
+         display: block;
+     }
+
+     .storeVideo {
+         clear: both;
+     }
+     div#storeControls {
+         ul.action {
+             text-align: left;
+             li {
+                 margin: 10px 0;
+             }
+         }
+     }
+     p.vacancies a {
+         float: right;
+         width: auto;
+         border: 1px solid $lightBorderGrey;
+         color: $grey;
+         font-weight: bold;
+         @extend %btn;
+         &:hover {
+             border-color: $grey;
+         }
+     }
+     a.roiText {
+         display: none;
+     }
+ }
+ 
+ .espotContainer.footer {
+     display: none;
+ }
+
+
+@include tabletPortrait {
+    #primary .element {
+        width: 63%;
+    }
+    #primary div#aToZList ol {
+        text-align: center;
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    .textSpot img {
+        width: 100%;
+    }
+}

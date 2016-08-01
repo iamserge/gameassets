@@ -1,0 +1,75 @@
+#pgLogin {
+    #content {
+        .container {
+            float: left;
+            width: 50%;
+            height: 100%;
+            margin-bottom: 100px;
+            padding: 20px;
+            background: white;
+            &.first {
+                width: 48%;
+                margin-right: 2%;
+            }
+            .wrapper {
+                background: white;
+                padding: 20px;
+                height: 100%;
+                border: 1px solid $lightBorderGrey;
+            }
+        }
+    }
+    .intro {
+        margin-bottom: 20px;
+        ul {
+            margin: 0 0 15px 20px;
+            li {
+                list-style-type: disc;
+                color: $purple;
+                margin-bottom: 5px;
+                span {
+                    color: $grey;
+                }
+            }
+        }
+    }
+    .field {
+        position: relative;
+        .indicator {
+            margin-top: 10px;
+        }
+    }
+    .errorMessage {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $saleRed;
+    }
+    #registerSection {
+        text-align: right;
+        a {
+            @extend %primaryBtn;
+        }
+    }
+    .forgotPassword {
+        text-align: right;
+        margin-top: 20px;
+        a {
+            color: $purple;
+            font-size: 14px;
+        }
+    }
+    .g-recaptcha {
+        margin: 20px 0;
+        @extend %clearfix;
+        > div {
+            float: right;
+        }
+    }
+    div#errorSummary {
+        margin-bottom: 20px;
+        ul li {
+            color: $saleRed;
+        }
+    }
+}

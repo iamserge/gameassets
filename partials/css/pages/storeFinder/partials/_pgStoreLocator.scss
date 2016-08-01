@@ -1,0 +1,61 @@
+ #pgStoreLocator {
+     div#storeList {
+         float: left;
+         width: 50%;
+     }
+     .store {
+         padding: 20px;
+         background: $lightBorderGrey;
+         margin-bottom: 20px;
+         p.dist {
+             float: right;
+         }
+     }
+     .storeLocatorResults {
+         padding: 0;
+     }
+     form#locateStore {
+         float: right;
+         width: 48%;
+         fieldset {
+             width: 100%;
+         }
+     }
+     p.info {
+         float: right;
+         width: 48%;
+     }
+     p.vacancies a {
+         margin-top: 10px;
+     }
+     p.numberOfResults {
+         margin-bottom: 20px;
+     }
+     li.tel {
+         margin-top: 10px;
+     }
+     /* No results */
+     &.noStoreResults {
+         .storeLocatorResults p {
+             float: left;
+             width: 50%;
+             &.titleStore {
+                
+             }
+             &:nth-child(2) {
+                float:left;
+                width:40%;
+             }
+             &.info {
+                 clear: both;
+                 float: right;
+                 width: 45%;
+                 margin-top: 20px;
+             }
+             &.vacancies {
+                 clear: both;
+                 float: right;
+             }
+         }
+     }
+ }

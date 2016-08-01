@@ -1,0 +1,726 @@
+body.checkout {
+    background-color: $lightBackgroundGrey;
+    h1,
+    h2,
+    h3 {
+        text-transform: none;
+        @extend %openSansText;
+    }
+    header .logo {
+        display: block;
+        height: 53px;
+    }
+    &.basket.anon header .logo, &#pgEmptyBasket header .logo {
+        display: table-cell;
+    }
+    #content {
+        overflow: hidden;
+    }
+    .container, #content {
+        width: 950px;
+        height: 100%;
+    }
+    header > .container {
+        width: 100%;
+        a:hover {
+            text-decoration: none;
+        }
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    h1 {
+        text-align: left;
+        font-size: 25px;
+        line-height: 32px;
+        padding: 0 0 20px 0;
+        margin: 0 0 10px 0;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: normal;
+    }
+    h3 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    a {
+        text-decoration: none;
+        &:hover, &:active, &:focus {
+            text-decoration: underline;
+        }
+    }
+    header a {
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    } 
+}
+
+body .wrapper {
+    margin-bottom: 40px;
+}
+
+.checkboxContainer {
+    label {
+        display: inline-block;
+        user-select: none;
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $grey;
+        cursor: pointer;
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+        @include borderRadius(2px);
+        @include transition-duration(0.25s);
+        &:after {
+            content: '';
+            display: block;
+            margin-left: 6px;
+            margin-top: 1px;
+            width: 3px;
+            height: 11px;
+            border: solid $grey;
+            border-width: 0 3px 3px 0;
+            @include transform(rotate(45deg));
+        }
+        &:hover {
+            color: #269b0a;
+            border-color: $grey;
+            background: $grey;
+            &:after {
+                border-color: white;
+            }
+        }
+        &:active {
+            @include transition-duration(0);
+            -webkit-filter: brightness(0.8);
+        }
+    }
+    input {
+        display: none;
+        &:checked + {
+            label {
+                color: #269b0a;
+                border-color: $grey;
+                background: $grey;
+                &:after {
+                    border-color: white;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0px 0 20px 0;
+    text-transform: none;
+    @extend %openSansText;
+}
+
+select {
+    width: 30%;
+}
+
+span.note {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="submit"] {
+    @extend %primaryBtn;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.inputContainer {
+    width: 60%;
+    overflow: hidden;
+    &.twoRows {
+        input {
+            float: left;
+            width: 48%;
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+}
+
+#mainContent {
+    width: 64%;
+    float: left;
+    position: relative;
+    @include lightBorderBox();
+    margin-bottom: 70px;
+    > div {
+        padding: 20px;
+        height: 100%;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.section {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $lightBorderGrey;
+    h2 {
+        font-size: 18px;
+        font-weight: normal;
+        margin: 12px 0;
+    }
+    > div {
+        clear: both;
+        height: 45px;
+        > * {
+            width: 50%;
+            float: left;
+        }
+        &:after {}
+        > div {
+            height: 100%;
+            &.col2 {
+                margin-top: 0;
+            }
+        }
+    }
+    button {
+        height: 100%;
+    }
+    &:last-of-type {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+.section > div > * {
+    float: left;
+}
+
+.inputMsg {
+    text-align: right;
+    margin-top: 0;
+    span {
+        width: 91%;
+        padding: 12px 0 12px 14px;
+        margin: 2px 0 0 4%;
+        display: inline-block;
+        background: $backgroundGrey;
+        position: relative;
+        line-height: 1em;
+        font-size: 14px;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all, 0.2s);
+        &:after {
+            right: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-right-color: $backgroundGrey;
+            border-width: 19px;
+            margin-top: -19px;
+            @include transition(all, 0.2s);
+        }
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        &.success {
+            background-color: green;
+            color: white;
+            &:after {
+                border-right-color: green;
+            }
+        }
+        &.error {
+            background-color: red;
+            color: white;
+            &:after {
+                border-right-color: red;
+            }
+        }
+    }
+}
+
+.col2 {
+    input,
+    select,
+    button {
+        width: 48%;
+        &:last-child {
+            margin-left: 2%;
+        }
+    }
+}
+
+.col2.btnContainer {
+    input,
+    select {
+        width: 68%;
+    }
+    button {
+        width: 26%;
+        float: right;
+    }
+}
+
+.section.checkbox > div {
+    height: auto;
+}
+
+
+/* Your details page */
+
+.infoGreyBox {
+    padding: 5px;
+    background: $backgroundGrey;
+}
+
+.section .autoHeight {
+    height: auto;
+}
+
+#basket .reward {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    background: white;
+    border: 1px solid #ECECEC;
+    padding: 18px 20px;
+    h2 {
+        margin-bottom: 5px;
+        font-weight: normal;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        line-height: 1.6;
+        em {
+            font-weight: bold;
+            color: $purple;
+        }
+    }
+}
+
+div.required {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "*";
+        color: red;
+        top: 38px;
+        right: -7px;
+        font-size: 16px;
+    }
+}
+
+.requiredInfo {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    span {
+        color: red;
+    }
+}
+
+.basket .discountContainer {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    background: white;
+    border: 1px solid #ECECEC;
+    padding: 20px;
+    h2 {
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: center;
+    }
+    label {
+        float: left;
+        width: 60%;
+        display: inline-block;
+        span {
+            @extend %visuallyHidden;
+        }
+        input {
+            width: 100%;
+        }
+    }
+    button {
+        float: right;
+        width: 35%;
+        padding: 11px;
+    }
+    em {
+        display: inline-block;
+        margin: 10px 0 0;
+        width: 100%;
+        font-size: 10px;
+        font-style: italic;
+    }
+}
+
+.anon {
+    .basketTotals ~ .discountContainer, 
+    .basketTotals ~ .reward {
+        min-height: 180px;
+    }
+}
+
+#locationChangeOverlay {
+    display: none;
+}
+
+#locationChangeContainer.modalContent {
+    top: 50%;
+    margin-top: -44px;
+    padding: 20px;
+    @include transition(margin-top, 0.4s);
+    .header {
+        height: 48px;
+        h2 {
+            display: inline-block;
+            width: auto;
+        }
+        input {
+            width: 165px;
+            margin: 0 10px;
+        }
+        > span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .shareLocation {
+            background-repeat: no-repeat;
+            background-position: 10px;
+            @extend %icon_store_black;
+            
+        }
+    }
+    .main {
+        margin-top: 20px;
+        overflow: hidden;
+        height: 0;
+        float: left;
+        width: 100%;
+        @include transition(height, 0.4s);
+        .shopsList {
+            width: 275px;
+            float: left;
+        }
+        li {
+            border-bottom: 1px solid $lightBorderGrey;
+            padding: 10px 12px;
+            span {
+                float: right;
+                font-weight: bold;
+            }
+            &.selected {
+                background-color: $lightBorderGrey;
+            }
+        }
+        .detailsContainer {
+            width: 400px;
+            float: right;
+            overflow: hidden;
+            line-height: 18px;
+            h3 {
+                margin: 20px 0;
+            }
+            .leftInfo {
+                float: left;
+                width: 50%;
+                input {
+                    margin-top: 14px;
+                }
+                span.address {
+                    display: block;
+                }
+            }
+            .rightInfo {
+                float: right;
+                width: 37%;
+                position: relative;
+                top: -37px;
+                > span {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    display: block;
+                }
+            }
+            input {
+                font-weight: normal;
+            }
+        }
+        #map {
+            width: 100%;
+            height: 143px;
+
+        }
+    }
+    &.opened {
+        margin-top: -232px;
+        .main {
+            height: 375px;
+        }
+    }
+}
+
+.first {
+    margin: 15px 0 16px;
+}
+
+.totalsContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ECECEC;
+    overflow: hidden;
+    .totals {
+        margin-top: 20px;
+        width: 400px;
+        float: right;
+        > div {
+            margin-bottom: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ECECEC;
+            &.total {
+                font-size: 22px;
+                font-weight: bold;
+                padding-top: 20px;
+                border-top: 1px solid #ECECEC;
+            }
+            &.card {
+                position: relative;
+                a {
+                    color: #333;
+                    font-size: 12px;
+                    font-weight: bold;
+                    float: right;
+                    margin-right: 62px;
+                }
+                > div {
+                    margin-top: 10px;
+                }
+                >span#cardAmount {
+                    position: absolute;
+                    top: 20px;
+                    right: 0px;
+                }
+            }
+            > span {
+                float: right;
+                font-weight: bold;
+            }
+        }
+    }
+
+   
+   
+}
+
+.disabled {
+    pointer-events: none;
+    label,
+    input {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}
+
+.tooltip {
+    position: absolute;
+    width: 243px;
+    color: #333;
+    background: #F7F7F7;
+    line-height: 15px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #F7F7F7;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+label,
+input,
+select,
+textarea {
+    &:hover,
+    &:focus {
+        ~ .tooltip {
+            visibility: visible;
+            opacity: 1;
+            z-index: 999;
+            font-size: 12px;
+        }
+    }
+}
+
+.labeledInputs {
+    margin-bottom: 40px;
+    height: auto;
+    > div.addressFields {
+        padding: 0;
+        div.required:after {
+            top: 1px;
+        }
+    }
+    > div, .addressFields > div {
+        padding: 20px 14% 0 0;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        height: auto;
+        overflow: hidden;
+        vertical-align: top;
+        display: inline-block;
+
+        label {
+            display: inline-block;
+            width: 37%;
+            text-align: right;
+            padding-right: 4%;
+            float: left;
+            margin-top: 14px;
+            opacity: 0.7;
+            @include transition(all, .2s);
+        }
+        select,
+        input {
+            width: 63%;
+            float: none;
+        }
+        &.col2 {
+            overflow: hidden;
+            > div {
+                width: 63%;
+                overflow: hidden;
+                float: right;
+            }
+            select,
+            input {
+                float: left;
+                width: 49%;
+            }
+        }
+        &:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+    }
+    div.required {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "*";
+            color: red;
+            top: 10px;
+            right: 65px;
+            clear: both;
+        }
+    }
+    span.fieldError {
+        float: left;
+        margin: 8px 0 0px 37%;
+        font-size: 12px;
+        color: $red;
+    }
+    .field.fieldError {
+        input {
+            border-color: $red;
+            &:focus {
+                outline: none !important;
+            }
+        }
+        .errorMessage {
+            padding: 0;
+            background: transparent;
+            float: left;
+            margin: 8px 0 0px 32%;
+            font-size: 12px;
+            color: $red;
+            border: none;
+            p {
+                display: inline;
+            }
+            &:before {
+                content: " ";
+            }
+        }
+    }
+}
+
+fieldset.section.labeledInputs {
+    margin-bottom: 20px;
+}
+
+fieldset#notRecipient {
+    > * {
+        margin: 10px 0;
+        .indicator {
+            margin-bottom: 10px;
+        }
+    }
+    .required:after {
+        top: 35px;
+    }
+    .info p {
+        margin: 10px 0;
+    }
+}
+.pegiRating {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 28px;
+    background-size: 100%;
+    background-repeat: no-repeat;  
+    margin: 0 auto;
+    right: -21px;
+    top: 50%;
+    margin-top: -14px;
+    &.B18, &.P18 {
+        @extend %icon_pegi18;
+    }
+    &.B16, &.P16 {
+        @extend %icon_pegi16;
+    }
+    &.B12, &.P12 {
+        @extend %icon_pegi12;
+    }
+    &.B7, &.P7 {
+        @extend %icon_pegi7;
+    }
+    &.B3, &.P3 {
+        @extend %icon_pegi3;
+    }
+}

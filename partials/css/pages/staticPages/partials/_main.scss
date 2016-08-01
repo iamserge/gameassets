@@ -1,0 +1,92 @@
+div#breadcrumb {
+    display: none;
+}
+
+#pgStaticPageStandard #content {
+    #primary {
+        float: right;
+        width: 68%;
+        ul {
+            margin-left: 30px;
+        }
+        li {
+            list-style: disc;
+            margin-bottom: 10px;
+        }
+    }
+    #secondary {
+        float: left;
+        width: 30%;
+        margin-bottom: 60px;
+    }
+    .back { 
+        margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            &:before {
+                content: " < ";
+            }
+        }
+    }
+    label,
+    p,
+    li {
+        line-height: 1.2em;
+    }
+    a {
+        color: $purple;
+    }
+    h1 {
+
+    }
+    h3 {
+        color: $grey;
+        margin: 20px 0;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+    h2 {
+        color: $grey;
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    select,
+    input {
+        width: 100%;
+    }
+    .formSepContainer {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 60px;
+        }
+    }
+    .formSep {
+        border: 1px solid $lightBorderGrey;
+        padding: 20px;
+    }
+    #staticCategories {
+        li {
+            margin-bottom: 10px;
+            a {
+                padding: 17px 13px;
+                background: white;
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                color: $purple;
+                text-transform: capitalize;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

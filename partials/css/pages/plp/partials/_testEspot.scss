@@ -1,0 +1,31 @@
+
+.espot.fullWidthDoubleBackground {
+	height: 71px;
+	position: relative;
+	margin: 0 10px 24px 10px;
+	a {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		span {
+			font-size: 25px;
+			color: white;
+			float: right;
+			line-height: 71px;
+			padding-right: 30px;
+			@extend %openSansText;
+			span {
+				margin-left: 17px;
+			}
+		}
+	}
+}
+
+
+.espot.fullWidthDoubleBackground#fifa16{
+	background-image:  url(/wcsstore/SafeStorefrontAssetStore/newCss/prototypes/img/espot/particles.png), url(/wcsstore/SafeStorefrontAssetStore/newCss/prototypes/img/espot/bg.png);
+	a {
+		background: url('/wcsstore/SafeStorefrontAssetStore/newCss/prototypes/img/espot/fifaLogo.png') no-repeat left;
+	}
+}

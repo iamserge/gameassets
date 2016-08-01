@@ -1,0 +1,36 @@
+#pgMyNewsletter #content {
+    ul.action {
+        text-align: left;
+        width: 68%;
+        margin-left: 32%;
+        li {
+            display: inline-block;
+            input,
+            a {
+                margin: 0 10px;
+                display: inline-block;
+            }
+            input[type="submit"] {
+                border-color: $grey!important;
+            }
+        }
+        li.primary {
+            float: left;
+            width: 49%;
+        }
+        li.secondary {
+            float: right;
+            width: 49%;
+        }
+    }
+    fieldset.radioList.subscription {
+        margin-bottom: 20px;
+    }
+    form#newsletterSettings {
+        width: 80%;
+        margin-left: 5%;
+    }
+    input[type="radio"], input[type="checkbox"] {
+        margin-top: 17px;
+    }
+}

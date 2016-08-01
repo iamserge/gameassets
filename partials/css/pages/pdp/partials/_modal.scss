@@ -1,0 +1,397 @@
+
+
+.modal {
+    opacity: 0;
+    @include transition(opacity, 0.2s);
+    visibility: hidden;
+    div > iframe, div > img  {
+        z-index: 90;
+        position:relative;
+    }
+    iframe {
+        margin:0 auto;
+        display: block;
+    }
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+    >div {
+        padding: 20px;
+    }
+    span.arrow {
+        @extend %carouselArrows;
+        width: 20px;
+    }
+    /*span.arrow {
+        position: absolute!important;
+        top: 50%;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        @extend %gameIconFont;
+        color: #c2c2c2;
+        &.prev {
+            left: 5px;
+            &:before {
+                @extend %arrow-v-left;
+            }
+        }
+        &.next {
+            right: 0;
+            &:before {
+                @extend %arrow-v-right;
+            }
+        }
+    }
+
+    .error {
+        padding: 20px 100px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 29px;
+    }
+    .modalContent .loader {
+        padding: 20px 20px;
+        margin: -31px 0 0 -20px;
+        z-index: 10;
+        position:absolute!important;
+    }*/
+
+}
+
+#reviewOverlay {
+    .purple {
+        color: $purple;
+    }
+    strong {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    img {
+        float: left;
+        width: 20%;
+    }
+    form {
+        float: right;
+        width: 75%;
+        > div {
+            margin-bottom: 20px;
+            display: table;
+            width: 100%;
+            > * {
+                display: table-cell;
+                vertical-align: top;
+            }
+        }
+    }
+    label {
+        width: 20%;
+    }
+    textarea,
+    input {
+        width: 100%;
+    }
+    input {
+        padding: 5px;
+    }
+    .reviewTitle {}
+    .ratingContainer {
+        @extend %clearfix;
+        label {
+            float: left;
+        }
+        .ratingText {
+            float: left;
+        }
+    }
+    .reviewText {}
+    .btnContainer {
+        text-align: right;
+        margin: 0;
+    }
+}
+
+#screenshotsModal {
+    .modalContent {
+        img {
+            width: 100%;
+        }
+    }
+}
+#basketOverlay {
+    overflow-y: scroll;
+    .loader {
+        display: none;
+    }
+    .modalContent {
+        width: 820px;
+        padding: 0;
+    }
+    .itemDetails {
+        overflow: hidden;
+        padding: 20px;
+    }
+    .soldBy {
+        span {
+            font-weight: bold;
+        }
+    }
+    .provenance {
+        margin:5px 0 10px 0;
+    }
+    .imageContainer {
+        width: 16%;
+        float: left;
+        img {
+            width: 100%;
+        }
+    }
+    .title {
+        float: left;
+        width: 100%;
+        line-height: 24px;
+        margin: 0 0 20px 0;
+    }
+    .purple {
+        color: $purple;
+    }
+    .basketReview {
+        float: left;
+        width: 30%;
+        margin-left: 30px;
+    }
+    .mpStatus {
+        float: left;
+        overflow: hidden;
+        text-align: center;
+        margin: 20px 0 31px;
+        width: 100%;
+        font-size: 16px;
+        .CTAs {
+            float: none;
+            width: 267px;
+            margin: 10px auto;
+            text-align: center;
+            a {
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+    .warrantyEspotContainer {
+        display: none;
+    }
+    .warrantyContainer {
+        position: relative;
+        width: 292px;
+        padding-top: 17px;
+        &:hover {
+            .warrantyInfo {
+                display: block;
+            }
+        }
+    }
+    .warranty {
+        background-repeat: no-repeat;
+        padding: 13px 2px 13px 50px;
+        background-position: 17px;
+        background-size: 23px;
+        font-weight: bold;
+        background-color: rgba(236, 236, 236, 0.5);
+        border: 1px solid #ececec;
+        width: 273px;
+        display: block;
+        @extend %warrantyIcon;
+        &:hover {
+            background-color: rgba(236, 236, 236, 1);
+        }
+    }
+    .warrantyInfo {
+        display: none;
+        width: 16px;
+        height: 16px;
+        background-size: 100%;
+        position: absolute;
+        right: 2px;
+        top: 0px;
+        opacity: 0.6;
+        @extend %infoIcon;
+    }
+    .warrantyTerms {
+        margin-top: 7px;
+        display: block;
+        color: #333;
+        text-decoration: underline;
+        margin-left: 154px;
+    }
+    .CTAs {
+        float: right;
+        text-align: right;
+        .primary {
+            padding: 12px 20px;
+        }
+        .btn {
+            width: 100%;
+        }
+        .continue {
+            display: block;
+            margin-top: 20px;
+        }
+    }
+    div.notification {
+        padding: 5px;
+        background: $grey;
+        color: white;
+        text-align: center;
+        span {
+            font-weight: 500;
+        }
+    }
+    .row {
+        .value {
+            float: right;
+            font-weight: bold;
+        }
+    }
+    .itemCount {
+        margin: 10px 0;
+    }
+    .total {
+        font-size: 18px;
+        margin-top: 12px;
+        border-top: 1px solid $lightBorderGrey;
+        padding-top: 12px;
+    }
+    div.other {
+        padding: 0;
+        > div {
+            padding: 20px;
+            > strong {
+                padding-bottom: 10px;
+                border-bottom: 1px solid $lightBorderGrey;
+                display: block;
+            }
+            &.sliderContainer {
+                padding: 0;
+            }
+        }
+    }
+    .recommendation {
+        padding-bottom: 40px;
+        h2 {
+            font-size: 16px;
+            padding: 10px 0 10px 34px;
+            border-bottom: 1px solid $lightBorderGrey;
+            border-top: 1px solid $lightBorderGrey;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+    }
+    .sliderContainer {
+        width: 98%;
+        .slider ul li {
+            width: 150px;
+            a {
+                color: $grey;
+                text-decoration: none;
+
+            }
+            img {
+                width: 80%;
+            }
+            h3 {
+                font-size: 14px;
+                display: none;
+            }
+            .rating {
+                display: none;
+            }
+            span {
+                display: none;
+            }
+        }
+
+        .carouselPrev, .carouselNext {
+            top: 75px;
+            border: 1px solid $lightBorderGrey;
+            padding: 39px 4px;
+            &:before {
+                top: 30%;
+                font-size: 14px;
+            }
+        }
+        .carouselPrev:before {
+            right: 4px;
+        }
+        .carouselNext:before {
+            left: 5px;
+        }
+        .loader {
+            background-size: 25px;
+            text-indent: -9999px;
+            width: 25px;
+            padding: 0;
+            height: 25px;
+            bottom: 0;
+            top: 32px;
+            right: 50%;
+            left: auto;
+            margin-right: -12px;
+            display: block;
+        }
+        .IOsliderContainer .slides li a h3 {
+            height: 40px;
+        }
+        .platformLogo {
+            display: none;
+        }
+    }
+    .emsWrapper {
+        display: none;
+    }
+}
+
+#checkStockOverlay {
+    input {
+        height: 30px;
+    }
+    button {
+        padding: 5px 10px;
+    }
+    strong {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+#sellerDetails.modal {
+    .loader {
+        display: none;
+    }
+    .info {
+        margin: 10px 0;
+    }
+    .shipping {
+        width: 60%;
+        margin: 20px auto;
+        
+        > div {
+            border:1px solid $lightBorderGrey;
+            border-bottom: none;
+            overflow: hidden;
+            > div {
+                float: left;
+                width: 50%;
+                padding: 10px;
+                
+            }
+            .label {
+                border-right: 1px solid $lightBorderGrey;
+            }
+            &:last-child {
+                border-bottom: 1px solid $lightBorderGrey;
+            }
+        }
+    }
+}

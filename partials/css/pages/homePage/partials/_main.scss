@@ -1,0 +1,10 @@
+html, body {
+	background-color: #f7f7f7;
+}
+
+#homePage {
+	&.container {
+		width: 1200px;
+		margin-bottom: 100px;
+	}
+}

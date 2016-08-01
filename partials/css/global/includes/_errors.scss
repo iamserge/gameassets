@@ -1,0 +1,87 @@
+// Error Styles
+
+.errorMessage, 
+.errorSummary {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 100%;
+
+	&.hide {
+		display: none !important;
+	}
+}
+
+.errorMessage, 
+.addressError {
+	border: 1px solid lighten($red, 10%);
+	padding: 15px 15px 0 45px;
+	margin-bottom: 20px;
+	color: $red;
+	background: lighten($red, 42%);
+	position: relative;
+	line-height: 1.4;
+
+	p {
+		margin-bottom: 15px;
+	}
+
+	&:before {
+		content:" ";
+		position: absolute;
+		top: 21px;
+		left: 11px;
+		font-size: 20px;
+		background-size: 100%;
+		width: 26px;
+		height: 23px;
+		display: block;
+		@extend %icon_warning_red;
+	}
+}
+
+.addressError {
+	margin: 20px 0;
+	padding-bottom: 15px;
+}
+
+.errorSummary {
+	border-bottom: 1px solid $lightBorderGrey;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+
+	li,
+	p {
+		margin-bottom: 5px;
+		line-height: 1.4;
+		position: relative;
+		padding-left: 32px;
+		color: $red;
+		display: inline-block;
+		width: 100%;
+		&:before {
+			content: " ";
+			position: absolute;
+			top: 2px;
+			left: 0px;
+			background-size: 100%;
+			width: 21px;
+			height: 18px;
+			display: block;
+			@extend %icon_warning_red;
+		}
+	}
+	h2 {
+		margin-bottom: 10px;
+	}
+	a {
+		color: $grey;
+		font-size: 13px;
+		text-decoration: none;
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}

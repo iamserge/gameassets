@@ -1,0 +1,89 @@
+#content {
+    .container {
+        float: left;
+        width: 50%;
+        height: 420px;
+        margin-bottom: 100px;
+        &.first {
+            width: 48%;
+            margin-right: 2%;
+        }
+        .wrapper {
+            background: white;
+            padding: 20px;
+            height: 100%;
+        }
+    }
+    h1 {
+        font-size: 2.3em;
+        border-bottom: 2px solid #333;
+        color: #333;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    h2,
+    h3 {
+        color: $purple;
+        margin-bottom: 20px; 
+    }
+    .intro {
+        margin-bottom: 20px;
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            li {
+                list-style-type: disc;
+                color: $purple;
+                margin-bottom: 5px;
+                span {
+                    color: $grey;
+                }
+            }
+        }
+    }
+    .field {
+        position: relative;
+    }
+    .errorMessage {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color:$saleRed;
+    }
+    #registerSection {
+        text-align: right;
+        a {
+            @extend %primaryBtn;
+        }
+    }
+    .indicator {
+        margin-bottom: 10px;
+    }
+    .element {
+        margin-bottom: 20px;
+    }
+    select,
+    input {
+        width: 100%;
+    }
+    .g-recaptcha {
+        display: none;
+    }
+    .primary {
+        text-align: right;
+    }
+    input.login {
+        @extend %primaryBtn;
+        width: auto;
+    }
+    .forgotPassword {
+        text-align: right;
+        margin-top: 20px;
+        a {
+            color: $purple;
+            font-size: 0.8em;
+        }
+    }
+}

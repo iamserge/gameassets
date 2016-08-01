@@ -1,0 +1,232 @@
+.navRight {
+	width: 350px;
+	display: table-cell;
+	text-align: right;
+	@extend %dropdownMenu;
+
+	> div {
+
+		position: relative;
+		display: inline-block;
+		&:hover, &:focus, &.touched {
+			> a {
+				background-color: white;
+				color: black;
+				span:after {
+				    @extend %icon_downcta_black;
+				}
+				&#loginLink {
+					@extend %icon_account_black;
+				}
+				&#shopsLink {
+					@extend %icon_store_black;
+				}
+
+				&#basketLink {
+					@extend %icon_basket_black;
+				}
+			}
+			.dropdownMenu {
+				display: block;
+			}
+
+		}
+		@extend %navigation;
+		.storeFinderDropDown {
+			width: 216px;
+			right: 0;
+			padding: 10px;
+			input[type="text"] {
+				width: 137px;
+				font-size: 14px;
+			}
+			input[type="submit"] {
+				background-color: $purple;
+				text-indent: -9999px;
+				background-repeat: no-repeat;
+				background-size: 20px;
+				background-position: center;
+				width: 50px;
+				padding: 12px 0 8px;
+				margin-left: 5px;
+				@extend %icon_search_white;
+				&.disabled {
+					pointer-events: none;
+					background-color: $lightGrey;
+				}
+			}
+		}
+	}
+
+
+	#loginLink {
+		@extend %icon_account_white;
+	}
+
+	#shopsLink {
+		background-size: 13px;
+		padding: 2px 0px 0px 25px;
+		@extend %icon_store_white;
+	}
+
+	#basketLink {
+		@extend %icon_basket_white;
+	}
+
+	.menuContainer {
+		position: absolute;
+		float: right;
+		top: 50px;
+		left: 0;
+		width: 100%;
+	}
+
+	.dropdownMenu {
+		width: 100%;
+	}
+}
+
+.accountDropdown {
+	&.dropdownMenu {
+		width: 210px;
+		left: 0;
+		padding: 10px;
+	}
+	.greeting {
+		display: block;
+		font-weight: bold;
+		margin-top: 5px;
+		padding-left: 5px;
+		color: $grey;
+	}
+	.rewardPoints {
+		font-size: 12px;
+		padding-left: 5px;
+		display: block;
+		color: $purple;
+		a {
+			color: $purple;
+		    margin-top: 5px;
+		}
+	}
+	.logoff {
+		text-align: center;
+		font-size: 12px;
+		padding-top: 10px;
+		margin-bottom: 0;
+		border-top: 1px solid $lightBorderGrey
+	}
+	.links {
+		width: 100%;
+		a {
+			padding: 10px 10px 10px 5px;
+			margin-bottom: 0;
+			border-top: 1px solid $lightBorderGrey;
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+
+	a {
+		color: $grey;
+		display: block;
+		margin-bottom: 10px;
+		width: 100%;
+		text-decoration: none;
+	}
+
+	.rewardLink {
+		color: $purple;
+		font-style: italic;
+		margin-bottom: 0;
+	}
+}
+
+
+
+.dropdownCart {
+	&.dropdownMenu {
+		width: 250px;
+		padding: 0;
+		right: 0;
+		left: auto;
+	}
+
+	.item {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		margin-top: 10px;
+		color: $grey;
+		text-decoration: none;
+		border-bottom: 1px solid $veryLightGrey;
+		h3 {
+			font-size: 14px;
+			line-height: 18px;
+		}
+		> div {
+			width: 163px;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 11px;
+		}
+		.bottom {
+			width: 100%;
+		    margin: 10px 0 0 0;
+		}
+	}
+
+	img {
+		width: 50px;
+		display: inline-block;
+	}
+
+	h3 {
+		margin-bottom: 20px;
+		line-height: 20px;
+		font-weight: normal;
+	}
+
+	.qty {
+		font-size: 12px;
+	}
+
+	.price {
+		float: right;
+		color: $purple;
+		font-weight: bold;
+	}
+
+	.platform {
+		display: none;
+	}
+
+	.totals {
+		overflow: hidden;
+		width: 100%;
+		padding: 0px 10px;
+		margin: 20px 0;
+	}
+
+	.total {
+		color: $grey;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 11px;
+		width: 99px;
+		display: inline-block;
+	}
+
+	.btn {
+		float: right;
+	}
+
+	.empty {
+		color: #333;
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,23 @@
+.signPosts {
+	width: 100%;
+	background: white;
+	margin:20px 0;
+	> div {
+		width: 1200px;
+		margin: 0 auto;
+		@extend %flexbox;
+		> div {
+			display: inline-block;
+			flex: 1;
+			span {
+				display: block;
+				text-align: center;
+				font-size:16px;
+			}
+		}
+	}
+	strong {
+		font-weight:bold;
+	}
+}
+

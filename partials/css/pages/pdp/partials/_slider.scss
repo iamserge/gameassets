@@ -1,0 +1,97 @@
+.thumbSliderContainer {
+    .thumbSlider {
+        width: 86%;
+        margin: 5px auto 0;
+        height: 50px;
+        ul li {
+            text-align: center;
+        }
+    }
+    .slides {
+        width: 700%;
+        .slide img {
+            //width: 100%;
+        }
+    }
+    .limelight {
+        span {
+            display: block;
+            width: 90%;
+            height: 100%;
+            padding-top: 1px;
+            margin: 0 auto;
+            background-color: rgba(51, 51, 51, 0.08);
+            &:after {
+                content: " ";
+                display: block;
+                margin: 12px auto 0 auto;
+                opacity: 0.5;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 13px 0 13px 15px;
+                border-color: transparent transparent transparent $grey;
+            }
+        }
+        
+    }
+
+    .youtube {
+        position: relative;
+        &:after {
+            content: " ";
+            display: block;
+            width: 0;
+            height: 0;
+            top: 14px;
+            left: 55px;
+            position: absolute;
+            border-style: solid;
+            border-width: 13px 0 13px 15px;
+            border-color: transparent transparent transparent white;
+        }
+    }
+    
+    .carouselPrev,
+    .carouselNext {
+        @extend %carouselArrows;
+        width: 20px;
+    }
+    .carouselPrev {
+        left: -10px;
+    }
+    .carouselNext {
+        right: -10px;
+    }
+    .reviewContainer {
+        .carouselPrev,
+        .carouselNext {
+            bottom: 2px;
+            width: 20px;
+            text-align: center;
+            color: #c2c2c2;
+            font-size: 12px;
+            cursor: pointer;
+            span {
+                text-indent: -9999px;
+                display: inline-block;
+            }
+        }
+        .carouselPrev {
+            float: left;
+            padding-left: 2px;
+            &:before {
+                content: " ";
+                @extend %icon_rightarrow_black;
+            }
+        }
+        .carouselNext {
+            float: right;
+            padding-left: 4px;
+            &:before {
+                content: " ";
+                @extend %icon_rightarrow_black;
+            }
+        }
+    }
+}
